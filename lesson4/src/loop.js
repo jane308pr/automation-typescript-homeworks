@@ -12,6 +12,15 @@ while ( i < 10 ) {
     i++;
 }
 
+console.log('\n------do-while-------\n');
+i = 0;
+do {
+    console.log(i);
+    i++;
+}
+while (i < 10);
+
+
 console.log('\n------for-------\n');
 for (i = 100; i > -1; i -= 10) {
     console.log(i);
@@ -23,3 +32,11 @@ while (i > -1) {
     console.log(i);
     i -= 10;
 }
+
+console.log('\n------do-while-------\n');
+i = 100;
+do {
+    console.log(i);
+    i -= 10;
+}
+while (i > -1);
