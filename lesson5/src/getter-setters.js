@@ -8,12 +8,6 @@ const bookStore = {
         city: 'Kyiv',
         street: 'Vasylkivska'
     },
-    getAvailableBooks() {
-        return this._books.filter(book => book.isAvailable).map(book => ({
-            bookTitle: book.title,
-            bookAuthor: book.author
-        }));
-    },
     set book(book) {
         this._books.push(book);
     },
@@ -22,6 +16,12 @@ const bookStore = {
     },
     get address() {
         return this._address;
+    },
+    getAvailableBooks() {
+        return this._books.filter(book => book.isAvailable).map(book => ({
+            bookTitle: book.title,
+            bookAuthor: book.author
+        }));
     },
     getBookStoreInfo() {
         return {
