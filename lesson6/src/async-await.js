@@ -1,6 +1,6 @@
 async function getCompletedTodosForUser(userId) {
     try {
-        const response = await fetch('http://jsonplaceholder.typicode.com/todos/1');
+        const response = await fetch('http://jsonplaceholder.typicode.com/todos');
         const allTodos = await response.json();
         return filterCompletedToDos(allTodos, userId);
     } catch {
@@ -13,4 +13,7 @@ function filterCompletedToDos(json, userId) {
     console.log(completedTodos);
 }
 
-getCompletedTodosForUser(1);
+(async () => {
+    await getCompletedTodosForUser(1);
+    await getCompletedTodosForUser(2);
+})();
