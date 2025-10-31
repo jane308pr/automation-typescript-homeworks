@@ -1,0 +1,434 @@
+{
+	"info": {
+		"_postman_id": "f504c74a-c9de-4d3f-880f-41ef766706b9",
+		"name": "TheCatsApi_v1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29012957"
+	},
+	"item": [
+		{
+			"name": "upload the image",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Id is not empty\", function () {",
+							"    pm.response.to.have.status(201);",
+							"    const responseJson = pm.response.json();",
+							"    pm.expect(responseJson.id).to.not.be.empty;",
+							"    pm.collectionVariables.set(\"image_id\", responseJson.id);",
+							"});",
+							"",
+							"pm.test(\"Verify that sub_id is correct\", function () {",
+							"    const responseJson = pm.response.json();",
+							"    const expectedSudId = pm.collectionVariables.get(\"sud_id\");",
+							"    pm.expect(responseJson.sub_id).to.not.be.equal(expectedSudId);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "my_cat_image.png"
+						},
+						{
+							"key": "sub_id",
+							"value": "{{sub_id}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/images/upload",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"images",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add favourites for image",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Verify favourites structure\", function () {",
+							"    pm.response.to.have.status(200);",
+							"    const favouritesJson = pm.response.json();",
+							"    pm.expect(favouritesJson).to.not.be.empty;",
+							"    pm.expect(favouritesJson).to.have.keys(\"message\", \"id\");",
+							"    pm.expect(favouritesJson.message).to.eql(\"SUCCESS\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"image_id\":\"{{image_id}}\",\n\t\"sub_id\": \"{{sub_id}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/favourites",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"favourites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get favourites by sub_id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Verify that favourites for uloaded image is present\", function () {",
+							"    const imgId = pm.collectionVariables.get(\"image_id\");",
+							"    ",
+							"    const favouritesJson = pm.response.json();",
+							"    ",
+							"    const favorImg = favouritesJson.find(fav => fav.image_id == imgId);",
+							"    pm.expect(favorImg.image.id).to.be.equal(imgId);",
+							"    pm.expect(favorImg.image.url).to.be.not.empty;",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/favourites?sub_id={{sub_id}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"favourites"
+					],
+					"query": [
+						{
+							"key": "sub_id",
+							"value": "{{sub_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add votes for image",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Verify votes structure\", function () {",
+							"    const expectedImgId = pm.collectionVariables.get(\"image_id\");",
+							"    const expectedSubId = pm.collectionVariables.get(\"sub_id\");",
+							"    const expectedVoteValue = pm.collectionVariables.get(\"voteValue\");",
+							"",
+							"    ",
+							"    pm.response.to.have.status(201);",
+							"    const votesJson = pm.response.json();",
+							"",
+							"    pm.expect(votesJson).to.not.be.empty;",
+							"    pm.expect(votesJson).to.include.keys(\"message\", \"image_id\", \"sub_id\", \"value\");",
+							"    pm.expect(votesJson.message).to.be.equal(\"SUCCESS\");",
+							"    pm.expect(votesJson.image_id).to.be.equal(expectedImgId);",
+							"    pm.expect(votesJson.sub_id).to.be.equal(expectedSubId);",
+							"    pm.expect(votesJson.value).to.be.equal(expectedVoteValue);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"image_id\":\"{{image_id}}\",\n\t\"sub_id\": \"{{sub_id}}\",\n    \"value\":\"{{voteValue}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/votes",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"votes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get votes by sub_id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Verify that votes for uloaded image is present\", function () {",
+							"    const imgId = pm.collectionVariables.get(\"image_id\");",
+							"",
+							"    const votesJson = pm.response.json();",
+							"",
+							"    const votesIds = votesJson.map(vote => vote.image.id);",
+							"    pm.expect(votesIds).to.include(imgId);",
+							"});",
+							"",
+							"pm.test(\"Verify that votes value is correct for uloaded image\", function () {",
+							"    const imgId = pm.collectionVariables.get(\"image_id\");",
+							"    const expectedVoteValue = Number(pm.collectionVariables.get(\"voteValue\"));",
+							"",
+							"    const votesJson = pm.response.json();",
+							"",
+							"    const imageVote = votesJson.find(vote => vote.image_id == imgId);",
+							"    pm.expect(imageVote.value).to.be.equal(expectedVoteValue);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/votes?sub_id={{sub_id}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"votes"
+					],
+					"query": [
+						{
+							"key": "sub_id",
+							"value": "{{sub_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete image",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/images/{{image_id}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"images",
+						"{{image_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get favourites for deleted img",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Verify that image data is absent for its favourites\", function () {",
+							"    const imgId = pm.collectionVariables.get(\"image_id\");",
+							"    ",
+							"    const votesJson = pm.response.json();",
+							"",
+							"    const voteImg = votesJson.find(fav => fav.image_id == imgId);",
+							"    pm.expect(voteImg).to.exist.and.to.have.property('image').that.is.empty;",
+							"",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/favourites?sub_id={{sub_id}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"favourites"
+					],
+					"query": [
+						{
+							"key": "sub_id",
+							"value": "{{sub_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get votes by for deleted img",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Verify that image data is absent for its favourites\", function () {",
+							"    const imgId = pm.collectionVariables.get(\"image_id\");",
+							"    ",
+							"    const votesJson = pm.response.json();",
+							"",
+							"    const voteImg = votesJson.find(fav => fav.image_id == imgId);",
+							"    pm.expect(voteImg.image).to.be.empty;",
+							"",
+							"    pm.collectionVariables.unset(\"image_id\");",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/votes?sub_id={{sub_id}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"votes"
+					],
+					"query": [
+						{
+							"key": "sub_id",
+							"value": "{{sub_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "live_224AHxA71vCu28VfBLs90qkDeq7nVmkGp29R3HNpLt7LBSsaykgG1ZOvx4pRcAzY",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "x-api-key",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://api.thecatapi.com/v1",
+			"type": "string"
+		},
+		{
+			"key": "sub_id",
+			"value": "jane",
+			"type": "string"
+		},
+		{
+			"key": "voteValue",
+			"value": "10",
+			"type": "string"
+		}
+	]
+}
