@@ -1,9 +1,10 @@
 {
 	"info": {
-		"_postman_id": "f504c74a-c9de-4d3f-880f-41ef766706b9",
+		"_postman_id": "5d7b7f3c-c971-4403-ac64-22f41f4d754c",
 		"name": "TheCatsApi_v1",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "29012957"
+		"_exporter_id": "29012957",
+		"_collection_link": "https://gold-equinox-422776.postman.co/workspace/my-workspace~134fe2a1-ed7f-4fbc-813c-9b6d0bcf5429/collection/29012957-5d7b7f3c-c971-4403-ac64-22f41f4d754c?action=share&source=collection_link&creator=29012957"
 	},
 	"item": [
 		{
@@ -18,6 +19,7 @@
 							"    const responseJson = pm.response.json();",
 							"    pm.expect(responseJson.id).to.not.be.empty;",
 							"    pm.collectionVariables.set(\"image_id\", responseJson.id);",
+							"    pm.collectionVariables.set(\"imageUrl\", responseJson.url);",
 							"});",
 							"",
 							"pm.test(\"Verify that sub_id is correct\", function () {",
@@ -117,12 +119,14 @@
 						"exec": [
 							"pm.test(\"Verify that favourites for uloaded image is present\", function () {",
 							"    const imgId = pm.collectionVariables.get(\"image_id\");",
+							"    const imgUrl = pm.collectionVariables.get(\"imageUrl\");",
 							"    ",
 							"    const favouritesJson = pm.response.json();",
 							"    ",
 							"    const favorImg = favouritesJson.find(fav => fav.image_id == imgId);",
+							"    pm.expect(favorImg).to.not.null;",
 							"    pm.expect(favorImg.image.id).to.be.equal(imgId);",
-							"    pm.expect(favorImg.image.url).to.be.not.empty;",
+							"    pm.expect(favorImg.image.url).to.be.equal(imgUrl);",
 							"});",
 							"",
 							""
@@ -215,11 +219,14 @@
 						"exec": [
 							"pm.test(\"Verify that votes for uloaded image is present\", function () {",
 							"    const imgId = pm.collectionVariables.get(\"image_id\");",
+							"    const imgUrl = pm.collectionVariables.get(\"imageUrl\");",
 							"",
 							"    const votesJson = pm.response.json();",
 							"",
-							"    const votesIds = votesJson.map(vote => vote.image.id);",
-							"    pm.expect(votesIds).to.include(imgId);",
+							"    const imgVote = votesJson.find(vote => vote.image_id == imgId);",
+							"    pm.expect(imgVote).to.not.null;",
+							"    pm.expect(imgVote.image.id).to.be.equal(imgId);",
+							"    pm.expect(imgVote.image.url).to.be.equal(imgUrl);",
 							"});",
 							"",
 							"pm.test(\"Verify that votes value is correct for uloaded image\", function () {",
@@ -429,6 +436,10 @@
 			"key": "voteValue",
 			"value": "10",
 			"type": "string"
+		},
+		{
+			"key": "imageUrl",
+			"value": ""
 		}
 	]
 }
