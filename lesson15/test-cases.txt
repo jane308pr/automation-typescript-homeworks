@@ -1,0 +1,43 @@
+CSS
+
+Перевірити, що в Каталозі в категорії “Зоотовари” розділ “Корми для кішок” присутній у секції “Популярні категорії”
+1. Go to https://rozetka.com.ua/
+2. Find and click element -> [data-testid="fat_menu_btn"] (Каталог)
+3. Find and hover element -> .list [href="https://rozetka.com.ua/ua/zootovary/c3520929/"] (Пункт меню “Зоотовари”)
+4. Verify that element [data-testid="fat_menu_popular_categories_link"][href="https://rozetka.com.ua/ua/food_for_cats/c1461212/"] is present (Пункт меню “Корми для кішок”)
+5. Click on it
+6. Wait when element -> .catalog-heading become visible
+
+Перевірити, що товари в категорії “Зоотовари” -> “Корми для кішок” можна відфільтрувати за брендом “Rpyal Kanin”
+1. Go to https://rozetka.com.ua/
+2. Find and click on element -> rz-fat-menu-seo [href="https://rozetka.com.ua/ua/zootovary/c3520929/"]
+3. Wait when h1.portal__heading become visible
+4. Find and click element -> rz-list-tile [href="https://rozetka.com.ua/ua/food_for_cats/c1461212/"]
+5. Wait when element -> .catalog-heading become visible
+6. Find and select element -> [href="/ua/food_for_cats/c1461212/producer=royal-canin/"]
+7. Wait when [data-testid="selected-filter-item"]:nth-child(2) become visible and active
+8. Find all elements -> .item and verify that amount > 0
+
+
+XPATH
+
+Перевірити, що у пошуку можна використати популярний запит “Зубна щітка”
+1. Go to https://rozetka.com.ua/
+2. Find element //input and click on it
+3. Find all elements -> //ul[@class='tags-list']/li and verify that amount > 0
+4. Find element -> //ul[@class='tags-list']/li/a[contains(text(), 'зубна щітка')] and click on it
+5. Wait when element -> //h2/span[contains(text(), 'зубна щітка')] become visible
+6. Find all elements //li[contains(@class, 'catalog-grid__cell')] and verify that amount > 0
+
+Перевірити що можна додати товар в корзину із категорії “Зоотовари” -> “Корми для кішок”
+1. Go to https://rozetka.com.ua/
+2. Find and click on element -> //a[text()='Зоотовари']
+3. Wait when //h1[text()='Зоотовари'] becomes visible.
+4. Find and click element -> //li[@class='tile-cats__item']/a[@href='https://rozetka.com.ua/ua/food_for_cats/c1461212/'].
+5. Wait when element -> //h1[contains(text(),'Корм для котів')] becomes visible.
+6. Find element //div[@class='item'][2]//a[@class='tile-image-host'] and save its attribute ‘href’.
+7. Find and click on element -> //div[@class='item'][2]//button[@class='buy-button'].
+8. Wait when element -> //div[@class='item'][2]//button[contains(@class, 'buy-button_state_in-cart')] becomes visible and active and click on it.
+9. Wait for element -> //rz-modal-layout becomes visible.
+10. Find all elements -> //div[@class='cart-product'] and verify that there is only one such element
+11. Get saved href and verify that element  //div[@class='cart-product__main’]//a[href=“saved_value”] is present.
