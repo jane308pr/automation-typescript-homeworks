@@ -1,12 +1,12 @@
 
-name: Playwright Tests (No Shards) + Allure + GitHub Pages
+name: Playwright Tests + Allure + GitHub Pages
 
 on:
   push:
     branches: [main, lesson22]
   pull_request:
     branches: [main, lesson22]
-  workflow_dispatch: {}  # без параметрів
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -22,7 +22,7 @@ env:
 
 jobs:
   test:
-    name: Run Playwright Tests (no shards)
+    name: Run Playwright Tests
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
@@ -37,6 +37,7 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: 'npm'
+          cache-dependency-path: ${{ env.BUILD_FOLDER }}/package-lock.json
 
       - name: Install dependencies
         run: npm ci
@@ -131,7 +132,6 @@ jobs:
           path: ${{ env.BUILD_FOLDER }}/allure-report-single-file/
           retention-days: 30
 
-      # >>> Prepare Allure report for Pages (як у твоєму прикладі)
       - name: Prepare Allure report for Pages
         if: always() && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master' || github.ref == 'refs/heads/develop')
         run: |
@@ -188,7 +188,6 @@ jobs:
           </html>
           EOF
 
-      # >>> Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         if: always() && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/lesson22')
         id: gh-pages-deploy
