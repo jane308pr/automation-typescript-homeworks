@@ -55,7 +55,6 @@ jobs:
         run: |
           npm config set fund false
           npm config set audit false
-          npm config set scripts-prepend-node-path true
         working-directory: ${{ env.BUILD_FOLDER }}
 
       - name: Install dependencies (ignore scripts)
@@ -105,8 +104,5 @@ jobs:
         if: failure()
         run: |
           echo "---- NPM LOGS ----"
-          if [ -d "/home/runner/.npm/_logs" ]; then
-            ls -la /home/runner/.npm/_logs || true
-            tail -n +1 /home/runner/.npm/_logs/* || true
-          else
-            echo "No npm logs directory found."
+          if [ -d "/home/runner/.npm/_logs" ]; then ls -la /home/runner/.npm/_logs || true; tail -n +1 /home/runner/.npm/_logs/* || true; else echo "No npm logs directory found."; fi
+
