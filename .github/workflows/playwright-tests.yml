@@ -15,7 +15,7 @@ permissions:
   id-token: write
 
 env:
-  NODE_VERSION: '22.5.1'
+  NODE_VERSION: '24.x'
   BUILD_FOLDER: ./lesson21
 
 jobs:
