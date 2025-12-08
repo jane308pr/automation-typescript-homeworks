@@ -121,7 +121,7 @@ jobs:
           retention-days: 30
 
       - name: Prepare Allure report for Pages
-        if: always() && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master' || github.ref == 'refs/heads/develop')
+        if: always() && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/lesson22')
         run: |
           mkdir -p gh-pages/${{ github.run_number }}
           cp -r ${{ env.BUILD_FOLDER }}/allure-report/* gh-pages/${{ github.run_number }}/
