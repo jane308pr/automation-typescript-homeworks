@@ -168,9 +168,10 @@ jobs:
             <p>Available reports by build number:</p>
             <ul id="builds"></ul>
             <script>
+              // This will be populated when reports are generated
               const currentBuild = ${{ github.run_number }};
               document.getElementById('builds').innerHTML =
-                '<li class="latest"><a href="./' + currentBuild +</a> (Latest)</li>';
+                '<li class="latest"><a href="./' + currentBuild + '/">Build #' + currentBuild + '</a> (Latest)</li>';
             </script>
           </body>
           </html>
