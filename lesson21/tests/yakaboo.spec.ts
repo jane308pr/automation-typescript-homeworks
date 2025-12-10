@@ -90,7 +90,7 @@ test.describe('Yakaboo tests', () => {
         await test.step('Assert all available book prices are ≤ 50', async () => {
             const prices = await searchResultPage.getPricesOfFoundAvailableBooks();
             for (const price of prices) {
-                expect(price).toBeLessThanOrEqual(50);
+                expect(price).toBeLessThanOrEqual(0);
             }
         });
     });
