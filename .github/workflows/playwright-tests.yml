@@ -126,26 +126,6 @@ jobs:
           mkdir -p gh-pages/${{ github.run_number }}
           cp -r ${{ env.BUILD_FOLDER }}/allure-report/* gh-pages/${{ github.run_number }}/
 
-          # Create index.html that redirects to latest report
-          cat > gh-pages/index.html << 'EOF'
-          <!DOCTYPE html>
-          <html>
-          <head>
-            <meta charset="utf-8">
-            <title>Allure Reports</title>
-            <meta http-equiv="refresh" content="0; url=./${{ github.run_number }}/">
-            <style>
-              body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-              a { color: #0066cc; text-decoration: none; }
-            </style>
-          </head>
-          <body>
-            <h1>Allure Test Reports</h1>
-            <p>Redirecting to latest report: ./${{ github.run_number }}/Build #${{ github.run_number }}</a></p>
-          </body>
-          </html>
-          EOF
-
           # Create builds index
           cat > gh-pages/builds.html << 'EOF'
           <!DOCTYPE html>
@@ -168,7 +148,6 @@ jobs:
             <p>Available reports by build number:</p>
             <ul id="builds"></ul>
             <script>
-              // This will be populated when reports are generated
               const currentBuild = ${{ github.run_number }};
               document.getElementById('builds').innerHTML =
                 '<li class="latest"><a href="./' + currentBuild + '/">Build #' + currentBuild + '</a> (Latest)</li>';
@@ -211,7 +190,6 @@ jobs:
 
           echo "### 📦 Downloadable Reports" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "- 🎭 **Playwright HTML Report**: Download the \`playwright-html-report\` artifact" >> $GITHUB_STEP_SUMMARY
           echo "- 📊 **Allure Report**: Download the \`allure-report\` artifact" >> $GITHUB_STEP_SUMMARY
           echo "- 📄 **Allure Single File**: Download the \`allure-report-single-file\` artifact" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
@@ -235,8 +213,8 @@ jobs:
             const comment = `## 🎭 Playwright Test Results
             ### 📊 Reports
             - 🌐 **Allure (GitHub Pages)**: 
-              [View Latest Report - Build #${runNumber}](pagesLatestUrl)
-              [All Builds](pagesBuildsUrl)
+              [View Latest Report - Build #${runNumber}](${pagesLatestUrl})
+              [All Builds](${pagesBuildsUrl})
             - 📦 **Artifacts**: download **allure-report**, **allure-report-single-file**, **test-results** from [this](${runUrl}) workflow run
             ### 🧾 Summary
             - **Run Number:** ${runNumber}
