@@ -126,17 +126,17 @@ jobs:
           mkdir -p gh-pages/${{ github.run_number }}
           cp -r ${{ env.BUILD_FOLDER }}/allure-report/* gh-pages/${{ github.run_number }}/
 
-          touch gh-page/builds.txt
+          touch gh-pages/builds.txt
           CURRENT_BUILD=${{ github.run_number }}
 
           # Додаємо поточний білд, якщо його ще немає у списку
-          if ! grep -qx "$CURRENT_BUILD" builds.txt; then
-            echo "$CURRENT_BUILD" >> builds.txt
+          if ! grep -qx "$CURRENT_BUILD" gh-pages/builds.txt; then
+            echo "$CURRENT_BUILD" >> gh-pages/builds.txt
           fi
 
           # Сортуємо у спадному порядку та прибираємо дублі
-          sort -rn builds.txt | uniq > builds.sorted.txt
-          mv builds.sorted.txt builds.txt
+          sort -rn gh-pages/builds.txt | uniq > gh-pages/builds.sorted.txt
+          mv gh-pages/builds.sorted.txt gh-pages/builds.txt
 
               # Початок HTML
           cat > gh-pages/builds.html << 'HTML_HEAD'
@@ -166,15 +166,15 @@ jobs:
           while read -r BUILD; do
           if [ "$FIRST" -eq 1 ]; then
           # Перший (найбільший) білд — позначаємо як Latest
-          echo "    <li class=\"latest\"><a href=\"./${BUILD}/\">Build #${BUILD} (Latest)</a></li>" >> builds.html
+          echo "    <li class=\"latest\"><a href=\"./${BUILD}/\">Build #${BUILD} (Latest)</a></li>" >> gh-pages/builds.html
           FIRST=0
           else
-          echo "    <li><a href=\"./${BUILD}/\">Build #${BUILD}</a></li>" >> builds.html
+          echo "    <li><a href=\"./${BUILD}/\">Build #${BUILD}</a></li>" >> gh-pages/builds.html
           fi
-          done < builds.txt
+          done < gh-pages/builds.txt
           
           # Кінець HTML
-          cat >> builds.html << 'HTML_TAIL'
+          cat >> gh-pages/builds.html << 'HTML_TAIL'
           </ul>
           </body>
           </html>
