@@ -123,8 +123,13 @@ jobs:
       - name: Prepare Allure report for Pages
         if: always() && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/lesson22')
         run: |
-          mkdir -p gh-pages/${{ github.run_number }}
-          cp -r ${{ env.BUILD_FOLDER }}/allure-report/* gh-pages/${{ github.run_number }}/
+          
+          cd gh-pages
+
+          # Копіюємо репорт у папку поточного ранa
+          mkdir -p "${{ github.run_number }}"
+          cp -r "${{ env.BUILD_FOLDER }}/allure-report/"* "${{ github.run_number }}/"
+
 
           touch builds.txt
           CURRENT_BUILD=${{ github.run_number }}
