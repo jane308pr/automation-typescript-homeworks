@@ -126,35 +126,59 @@ jobs:
           mkdir -p gh-pages/${{ github.run_number }}
           cp -r ${{ env.BUILD_FOLDER }}/allure-report/* gh-pages/${{ github.run_number }}/
 
-          # Create builds index
-          cat > gh-pages/builds.html << 'EOF'
+          touch builds.txt
+          CURRENT_BUILD=${{ github.run_number }}
+
+          # Додаємо поточний білд, якщо його ще немає у списку
+          if ! grep -qx "$CURRENT_BUILD" builds.txt; then
+            echo "$CURRENT_BUILD" >> builds.txt
+          fi
+
+          # Сортуємо у спадному порядку та прибираємо дублі
+          sort -rn builds.txt | uniq > builds.sorted.txt
+          mv builds.sorted.txt builds.txt
+
+              # Початок HTML
+          cat > gh-pages/builds.html << 'HTML_HEAD'
           <!DOCTYPE html>
           <html>
           <head>
-            <meta charset="utf-8">
-            <title>All Builds - Allure Reports</title>
-            <style>
-              body { font-family: Arial, sans-serif; max-width: 800px; margin: 50px auto; padding: 20px; }
-              h1 { color: #333; }
-              ul { list-style: none; padding: 0; }
-              li { margin: 10px 0; padding: 10px; background: #f5f5f5; border-radius: 5px; }
-              a { color: #0066cc; text-decoration: none; font-weight: bold; }
-              a:hover { text-decoration: underline; }
-              .latest { background: #e3f2fd; border: 2px solid #2196f3; }
-            </style>
+          <meta charset="utf-8">
+          <title>Allure Test Reports - All Builds</title>
+          <style>
+            body { font-family:Arial, sans-serif; max-width:800px; margin:50px auto; padding:20px; }
+            h1 { color: #333; }
+            ul { list-style:none; padding:0;}
+            li { margin:10px 0; padding: 10px; background: #f5f5f5; border-radius: 5px; }
+            a { color: #0066cc; text-decoration: none; font-weight: bold; }
+            a:hover { text-decoration: underline; }
+            .latest { background: #e3f2fd; border: 2px solid #2196f3; }
+          </style>
           </head>
           <body>
-            <h1>📊 Allure Test Reports - All Builds</h1>
-            <p>Available reports by build number:</p>
-            <ul id="builds"></ul>
-            <script>
-              const currentBuild = ${{ github.run_number }};
-              document.getElementById('builds').innerHTML =
-                '<li class="latest"><a href="./' + currentBuild + '/">Build #' + currentBuild + '</a> (Latest)</li>';
-            </script>
+          <h1>📊 Allure Test Reports - All Builds</h1>
+          <p>Available reports by build number:</p>
+          <ul>
+          HTML_HEAD
+  
+          # Рендеримо елементи списку (останній ран — Latest)
+          FIRST=1
+          while read -r BUILD; do
+          if [ "$FIRST" -eq 1 ]; then
+          # Перший (найбільший) білд — позначаємо як Latest
+          echo "    <li class=\"latest\"><a href=\"./${BUILD}/\">Build #${BUILD} (Latest)</a></li>" >> builds.html
+          FIRST=0
+          else
+          echo "    <li><a href=\"./${BUILD}/\">Build #${BUILD}</a></li>" >> builds.html
+          fi
+          done < builds.txt
+          
+          # Кінець HTML
+          cat >> builds.html << 'HTML_TAIL'
+          </ul>
           </body>
           </html>
-          EOF
+          HTML_TAIL
 
       - name: Deploy to GitHub Pages
         if: always() && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/lesson22')
