@@ -126,17 +126,12 @@ jobs:
           mkdir -p gh-pages/${{ github.run_number }}
           cp -r ${{ env.BUILD_FOLDER }}/allure-report/* gh-pages/${{ github.run_number }}/
 
-          touch gh-pages/builds.txt
-          CURRENT_BUILD=${{ github.run_number }}
-
-          # Додаємо поточний білд, якщо його ще немає у списку
-          if ! grep -qx "$CURRENT_BUILD" gh-pages/builds.txt; then
-            echo "$CURRENT_BUILD" >> gh-pages/builds.txt
-          fi
-
-          # Сортуємо у спадному порядку та прибираємо дублі
-          sort -rn gh-pages/builds.txt | uniq > gh-pages/builds.sorted.txt
-          mv gh-pages/builds.sorted.txt gh-pages/builds.txt
+          
+          find gh-pages -maxdepth 1 -type d -printf '%f\n' \
+                | grep -E '^[0-9]+$' \
+                | sort -rn \
+                > gh-pages/builds.txt
+          cat gh-pages/builds.txt >> "$GITHUB_STEP_SUMMARY"
 
               # Початок HTML
           cat > gh-pages/builds.html << 'HTML_HEAD'
