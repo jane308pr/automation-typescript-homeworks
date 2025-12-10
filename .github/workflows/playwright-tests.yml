@@ -219,8 +219,8 @@ jobs:
           echo "### ✅ Test Results Summary" >> $GITHUB_STEP_SUMMARY
           echo "Check the test results summary above for detailed pass/fail statistics" >> $GITHUB_STEP_SUMMARY
    
-      - name: Comment PR with reports
-        if: always() && github.event_name == 'push'
+      - name: Comment commit with reports
+        if: always() && github.event_name == 'push' && github.ref == 'refs/heads/lesson22'
         uses: actions/github-script@v7
         with:
           script: |
@@ -239,14 +239,16 @@ jobs:
               [All Builds](pagesBuildsUrl)
             - 📦 **Artifacts**: download **allure-report**, **allure-report-single-file**, **test-results** from [this](${runUrl}) workflow run
             ### 🧾 Summary
-            - **Run Number:** ${run}
+            - **Run Number:** ${runNumber}
             - **Commit:** ${context.sha}
-            - **Branch:** ${context.payload.pull_request?.head?.ref || context.ref}
+            - **Branch:** ${context.ref}
             > Pages оновлюються до 2 хвилин. Якщо сторінка недоступна — спробуй трохи пізніше.`;
 
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
+            
+            await github.rest.repos.createCommitComment({
               owner,
               repo,
+              commit_sha: context.sha,
               body: comment
             });
+
