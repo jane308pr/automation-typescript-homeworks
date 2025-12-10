@@ -1,0 +1,2693 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - button [ref=e9] [cursor=pointer]:
+          - img [ref=e10]
+        - link "\"Yakaboo – інтернет-магазин з продажу книг" [ref=e14] [cursor=pointer]:
+          - /url: /
+          - img "\"Yakaboo – інтернет-магазин з продажу книг" [ref=e17]
+      - button "Каталог" [ref=e18] [cursor=pointer]:
+        - img [ref=e19]
+        - generic [ref=e21]: Каталог
+      - generic [ref=e22]:
+        - generic [ref=e24]:
+          - generic:
+            - img
+          - searchbox "Пошук" [ref=e25]
+          - button "Пошук" [ref=e26] [cursor=pointer]
+        - generic [ref=e28] [cursor=pointer]:
+          - img [ref=e29]
+          - generic [ref=e31]: Зв'язатися з нами
+          - img [ref=e32]
+      - generic [ref=e34]:
+        - button [ref=e35] [cursor=pointer]:
+          - img [ref=e37]
+        - button "Увійти" [ref=e44] [cursor=pointer]:
+          - img [ref=e46]
+          - generic [ref=e49]: Увійти
+  - generic [ref=e51]:
+    - link "Книжки" [ref=e56] [cursor=pointer]:
+      - /url: /ua/knigi.html
+    - generic [ref=e57]:
+      - complementary [ref=e59]:
+        - generic [ref=e61]:
+          - generic [ref=e62] [cursor=pointer]:
+            - generic [ref=e63]: Категорії книг
+            - img [ref=e65]
+          - generic [ref=e68]:
+            - link "Наближаємо Різдво" [ref=e71] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/nablizhaemo-rizdvo.html?book_publication=Bumazhnaja&price=0-50
+            - link "Новорічні хіти для дітей" [ref=e74] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/novorichni-knigodarunki-malim-chitunam.html?book_publication=Bumazhnaja&price=0-50
+            - link "Подарункові видання" [ref=e77] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/krasivi-podarunkovi-knigi.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "Романтика для сніжних днів: любовні романи" [ref=e80] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/romantika-oseni-ljubovni-romani.html?book_publication=Bumazhnaja&price=0-50
+            - link "Затишне зимове читання" [ref=e83] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/zatishne-zimove-chitannja.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "Зима у світі пригод: подорожі та відкриття" [ref=e86] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/zima-u-sviti-prigod-podorozhi-ta-vidkrittja.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "Мороз по шкірі: трилери, детективи, містика" [ref=e89] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/moroz-po-shkiri-trileri-detektivi-mistika.html?book_publication=Bumazhnaja&price=0-50
+            - link "Топ продажів Книжкової країни 2025" [ref=e92] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/top-prodazhiv-knizhkovoi-kraini-2025.html?book_publication=Bumazhnaja&price=0-50
+            - link "Загадкове осіннє читання англійською" [ref=e95] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/zagadkove-osinne-chitannja-anglijs-koju.html?book_publication=Bumazhnaja&price=0-50
+            - link "Книжкові новинки грудня" [ref=e98] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/knizhkovi-novinki.html?book_publication=Bumazhnaja&price=0-50
+            - link "Читай англійське цієї осені" [ref=e101] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/chitaj-anglijs-ke-ciei-oseni.html?book_publication=Bumazhnaja&price=0-50
+            - link "Книги про магію та чарівників" [ref=e104] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/knigi-pro-magiju-ta-charivnikiv.html?book_publication=Bumazhnaja&price=0-50
+            - link "Вибір читачів листопада" [ref=e107] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/vibir-chitachiv-misjacja.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "Сергій Жадан: проза, поезія, п’єси" [ref=e110] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/sergij-zhadan-proza-poezija-p-esi.html?book_publication=Bumazhnaja&price=0-50
+            - link "Back to school" [ref=e113] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/back-to-school.html?book_publication=Bumazhnaja&price=0-50
+            - link "Книжкові новинки липня" [ref=e116] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/knizhkovi-novinki-lipnja.html?book_publication=Bumazhnaja&price=0-50
+            - link "Електронні новинки липня" [ref=e119] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/elektronni-novinki-lipnja.html?book_publication=Bumazhnaja&price=0-50
+            - link "Літнє читання англійською" [ref=e122] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/litne-chitannja-anglijs-koju.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "Англомовна полиця: хіти та новинки" [ref=e125] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/anglomovna-policja-hiti-ta-novinki.html?book_publication=Bumazhnaja&price=0-50
+            - link "Сучасні українські автори" [ref=e128] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/suchasni-ukrains-ki-avtori.html?book_publication=Bumazhnaja&price=0-50
+            - link "Добірка книг до Дня Києва" [ref=e131] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/knizhki-pro-kiiv.html?book_publication=Bumazhnaja&price=0-50
+            - link "Час для нових навичок і хобі" [ref=e134] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/opanuj-novi-navichki-ta-hobi.html?book_publication=Bumazhnaja&price=0-50
+            - link "Почати з нуля - історії для натхнення" [ref=e137] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/pochati-z-nulja-istorii-dlja-nathnennja.html?book_publication=Bumazhnaja&price=0-50
+            - link "Вибір читачів червня" [ref=e140] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/vibir-chitachiv-chervnja.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "Покоління спротиву: творчість шістдесятників" [ref=e143] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/pokolinnja-sprotivu-tvorchist-shistdesjatnikiv.html?book_publication=Bumazhnaja&price=0-50
+            - link "Друга світова в художній літературі" [ref=e146] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/druga-svitova-v-hudozhnij-literaturi.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "Подих весни: душевне читання для гарного настрою" [ref=e149] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/podih-vesni-dushevne-chitannja-dlja-garnogo-nastroju.html?book_publication=Bumazhnaja&price=0-50
+            - link "Вибрана українська класика" [ref=e152] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/vibrana-ukrains-ka-klasika.html?book_publication=Bumazhnaja&price=0-50
+            - link "Екранізації 2025" [ref=e155] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/ekranizacii-2025.html?book_publication=Bumazhnaja&price=0-50
+            - link "70 мастрідів до Дня детективного роману" [ref=e158] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/70-mastridiv-do-dnja-detektivnogo-romanu.html?book_publication=Bumazhnaja&price=0-50
+            - link "Підтримка ментального здоровʼя" [ref=e161] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/pidtrimka-mental-nogo-zdorov-ja.html?book_publication=Bumazhnaja&price=0-50
+            - link "Головні англомовні релізи сезону" [ref=e164] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/golovni-anglomovni-relizi-sezonu.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "Хітова манга: класика та бестселери" [ref=e167] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/mangi-mastridi-fentezi-trileri-romantika.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "Квітневі промінчики: дітям про весну" [ref=e170] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/kvitnevi-prominchiki-ditjam-pro-vesnu.html?book_publication=Bumazhnaja&price=0-50
+            - link "День довкілля - плекаємо Землю разом!" [ref=e173] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/den-zemli-plekaemo-planetu-razom.html?book_publication=Bumazhnaja&price=0-50
+            - link "Книги про українських митців та їх художній доробок" [ref=e176] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/knigi-pro-ukrains-kih-mitciv-ta-ih-hudozhnij-dorobok.html?book_publication=Bumazhnaja&price=0-50
+            - link "Вперед до зірок! Книги про космос і космонавтів" [ref=e179] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/vpered-do-zirok-knigi-pro-kosmos-i-kosmonavtiv.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "Книжки про книжки: від романів до нон-фікшну" [ref=e182] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/knizhki-pro-knizhki-vid-romaniv-do-non-fikshnu.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "Чудесні світи нові: свіжа добірка антиутопій" [ref=e185] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/chudesni-sviti-novi-svizhi-ta-ochikuvani-antiutopii.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "Жіноче обличчя історії: книги про видатних жінок" [ref=e188] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/zhinoche-oblichchja-istorii-biografii-vidatnih-zhinok.html?book_publication=Bumazhnaja&price=0-50
+            - link "Криптовалюти, ШІ та технології в бізнесі" [ref=e191] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/kriptovaljuti-shi-ta-tehnologii-v-biznesi.html?book_publication=Bumazhnaja&price=0-50
+            - link "Найвідоміші історії кохання - класичні та сучасні" [ref=e194] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/najvidomishi-istorii-kohannja-klasichni-ta-suchasni.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "Шевченківська премія-2025: усі номінанти" [ref=e197] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/shevchenkivs-ka-premija-2025-korotkij-spisok.html?book_publication=Bumazhnaja&price=0-50
+            - generic [ref=e199]:
+              - 'link "Книга року ВВС-2024: короткий список" [ref=e200] [cursor=pointer]':
+                - /url: /ua/knigi/dobirki-yakaboo/kniga-roku-vvs-2024.html?book_publication=Bumazhnaja&price=0-50
+              - img [ref=e202] [cursor=pointer]
+            - link "Час змін. Професія та кар'єра" [ref=e206] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/chas-zmin-profesija-ta-kar-era.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "На захисті України: книги про армію та військовиків" [ref=e209] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/na-zahisti-ukraini-knigi-pro-armiju-ta-vijs-kovikiv.html?book_publication=Bumazhnaja&price=0-50
+            - link "Вибір читачів травня" [ref=e212] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/vibir-chitachiv-travnja.html?book_publication=Bumazhnaja&price=0-50
+            - link "Книжкові комплекти до 1000₴" [ref=e215] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/komplekti-1000-grn.html?book_publication=Bumazhnaja&price=0-50
+            - link "Бестселери Amazon 2024" [ref=e218] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/bestseleri-amazon-2024.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "Бізнес-література: рекомендації лідерів" [ref=e221] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/novij-dilovij-sezon-biznes-i-finansi.html?book_publication=Bumazhnaja&price=0-50
+            - generic [ref=e223]:
+              - link "Премія Goodreads Choice Awards 2024" [ref=e224] [cursor=pointer]:
+                - /url: /ua/knigi/dobirki-yakaboo/premija-goodreads-choice-awards-2024.html?book_publication=Bumazhnaja&price=0-50
+              - img [ref=e226] [cursor=pointer]
+            - link "Товсті книжки для затишних вечорів" [ref=e230] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/tovsti-knizhki-dlja-dovgih-zimovih-vechoriv.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "Вибір The Economist: найкращій нонфікшн 2024 року" [ref=e233] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/vibir-the-economist-najkraschij-nonfikshn-2024-roku.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "Активна весна: книги про здоров’я і спорт" [ref=e236] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/osinnij-marafon.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "Естетичні дарунки книголюбам: артбуки та ілюстровані видання" [ref=e239] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/estetichni-darunki-knigoljubam-artbuki-ta-iljustrovani-vidannja.html?book_publication=Bumazhnaja&price=0-50
+            - link "Казки народів світу для дітей і дорослих" [ref=e242] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/kazki-narodiv-svitu-dlja-ditej-i-doroslih.html?book_publication=Bumazhnaja&price=0-50
+            - link "Топові детективи і трилери 2024 року" [ref=e245] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/topovi-detektivi-i-trileri-2024-roku.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "Там, де можливо все: фантастика та фентезі" [ref=e248] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/tam-de-mozhlivo-vse-fantastika-ta-fentezi.html?book_publication=Bumazhnaja&price=0-50
+            - link "Лавреатки Нобелівської премії з літератури" [ref=e251] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/zhinki-lavreatki-nobelivs-koi-premii-z-literaturi.html?book_publication=Bumazhnaja&price=0-50
+            - link "День української писемності і мови - святкуємо разом!" [ref=e254] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/svjatkuemo-razom-den-ukrains-koi-pisemnosti-i-movi.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "Не тільки Кінг: ще 25 зірок горор-літератури" [ref=e257] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/ne-til-ki-king-sche-25-zirok-goror-literaturi.html?book_publication=Bumazhnaja&price=0-50
+            - link "Книжкова країна 2024. Хіти продажів" [ref=e260] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/knizhkova-kraina-2024-vidavnichi-hiti-prodazhiv.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "Нонфікшн англійською: 30 хітів 2024 року" [ref=e263] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/nonfikshn-anglijs-koju-30-hitiv-2024-roku.html?book_publication=Bumazhnaja&price=0-50
+            - link "Моторошні гостросюжетні новинки англійською" [ref=e266] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/motoroshni-gostrosjuzhetni-novinki-anglijs-koju.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "Хіти #BookTok" [ref=e269] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/hiti-booktok.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "Vogue рекомендує: найкращі книги 2024 року" [ref=e272] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/vogue-rekomendue-najkraschi-knigi-2024-roku.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "Божевілля, таємниці, привиди: класика готичної прози" [ref=e275] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/bozhevillja-taemnici-prividi-klasika-gotichnoi-prozi.html?book_publication=Bumazhnaja&price=0-50
+            - link "Вивчайте мови з книжками" [ref=e278] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/vivchajte-movi-z-knizhkami.html?book_publication=Bumazhnaja&price=0-50
+            - link "Реальні злочини, які шокували світ" [ref=e281] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/real-ni-zlochini-jaki-shokuvali-svit.html?book_publication=Bumazhnaja&price=0-50
+            - link "Жахи та жахастики до Геловіну" [ref=e284] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/vogni-zhovtnevih-svichok-mistika-i-detektivi.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "«Наш Формат»: новинки та хіти" [ref=e287] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/nash-format-novinki-ta-hiti.html?book_publication=Bumazhnaja&price=0-50
+            - link "Лавреати Букерівської премії" [ref=e290] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/lavreati-bukerivs-koi-premii.html?book_publication=Bumazhnaja&price=0-50
+            - link "Що читають мільярдери" [ref=e293] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/scho-chitajut-mil-jarderi.html?book_publication=Bumazhnaja&price=0-50
+            - link "Young adult детективи для підлітків і дорослих" [ref=e296] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/young-adult-detektivi-dlja-pidlitkiv-i-doroslih.html?book_publication=Bumazhnaja&price=0-50
+            - link "Найбільш впливові книги в історії людства" [ref=e299] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/najbil-sh-vplivovi-knigi-v-istorii-ljudstva.html?book_publication=Bumazhnaja&price=0-50
+            - link "Науково-фантастичні мастріди від Esquire" [ref=e302] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/naukovo-fantastichni-mastridi-vid-esquire.html?book_publication=Bumazhnaja&price=0-50
+            - link "Збірки короткої прози, які варті уваги" [ref=e305] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/zbirki-korotkoi-prozi-jaki-varti-uvagi.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "Coming of age: романи про дорослішання" [ref=e308] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/coming-of-age-romani-pro-doroslishannja.html?book_publication=Bumazhnaja&price=0-50
+            - link "Заборонені книги, які стали класикою" [ref=e311] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/zaboroneni-knigi-jaki-stali-klasikoju.html?book_publication=Bumazhnaja&price=0-50
+            - link "Книги, які допоможуть зрозуміти та полюбити математику" [ref=e314] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/knigi-jaki-dopomozhut-zrozumiti-ta-poljubiti-matematiku.html?book_publication=Bumazhnaja&price=0-50
+            - link "KyivBookFest 2024. Хіти продажів" [ref=e317] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/kyivbookfest-2024-hiti-prodazhiv.html?book_publication=Bumazhnaja&price=0-50
+            - link "Бестселери The New York Times 2024" [ref=e320] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/bestseleri-the-new-york-times-2024.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "Україна Незалежна: події та постаті" [ref=e323] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/ukraina-nezalezhna-podii-ta-postati.html?book_publication=Bumazhnaja&price=0-50
+            - link "Книжки з кольоровими зрізами" [ref=e326] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/knizhki-z-kol-orovimi-zrizami.html?book_publication=Bumazhnaja&price=0-50
+            - link "Українські політики" [ref=e329] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/ukrains-ki-politiki.html?book_publication=Bumazhnaja&price=0-50
+            - link "Книжки-лавреати міжнародних премій" [ref=e332] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/knizhki-lavreati-mizhnarodnih-premij.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "BookChef: бестселери" [ref=e335] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/bookchef-bestseleri.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "Подолати психотравму: допомога при ПТСР" [ref=e338] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/podolati-travmu.html?book_publication=Bumazhnaja&price=0-50
+            - link "Не чекайте паперові версії – читайте електронні!" [ref=e341] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/ne-chekajte-paperovi-versii-chitajte-elektronni.html?book_publication=Bumazhnaja&price=0-50
+            - link "Книжковий Арсенал 2024. Хіти продажів" [ref=e344] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/arsenal-2024-hiti-prodazhiv.html?book_publication=Bumazhnaja&price=0-50
+            - link "The British Book Awards 2024" [ref=e347] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/the-british-book-awards-2024.html?book_publication=Bumazhnaja&price=0-50
+            - link "Друга світова війна від першої особи" [ref=e350] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/druga-svitova-vijna-vid-pershoi-osobi.html?book_publication=Bumazhnaja&price=0-50
+            - link "Книжки на один вечір" [ref=e353] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/knizhki-na-odin-vechir.html?book_publication=Bumazhnaja&price=0-50
+            - link "Найкращі письменниці сучасності" [ref=e356] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/najkraschi-pis-mennici-suchasnosti.html?book_publication=Bumazhnaja&price=0-50
+            - link "Військова справа для професіоналів" [ref=e359] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/suchasna-vijs-kova-sprava-dlja-profesionaliv.html?book_publication=Bumazhnaja&price=0-50
+            - link "Читання на літніх канікулах" [ref=e362] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/chitannja-na-litnih-kanikulah.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "Весняні мандри: подорожуємо Україною" [ref=e365] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/podorozhuemo-ukrainoju.html?book_publication=Bumazhnaja&price=0-50
+            - link "Світ студії Ghibli" [ref=e368] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/svit-studii-ghibli.html?book_publication=Bumazhnaja&price=0-50
+            - link "Екранізації 2024" [ref=e371] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/ekranizacii-2024.html?book_publication=Bumazhnaja&price=0-50
+            - link "Список The Guardian - найкращі книжки XXI століття" [ref=e374] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/spisok-the-guardian-najkraschi-knizhki-xxi-stolittja.html?book_publication=Bumazhnaja&price=0-50
+            - link "Бізнес-вибір Forbes" [ref=e377] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/biznes-vibir-forbes.html?book_publication=Bumazhnaja&price=0-50
+            - link "Добірне українське фентезі та фантастика" [ref=e380] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/ukrains-ke-fentezi-ta-fantastika.html?book_publication=Bumazhnaja&price=0-50
+            - generic [ref=e382]:
+              - link "Премія Goodreads Choice Awards 2023" [ref=e383] [cursor=pointer]:
+                - /url: /ua/knigi/dobirki-yakaboo/premija-goodreads-choice-awards-2023.html?book_publication=Bumazhnaja&price=0-50
+              - img [ref=e385] [cursor=pointer]
+            - generic [ref=e388]:
+              - link "Бестселери Yakaboo 2023" [ref=e389] [cursor=pointer]:
+                - /url: /ua/knigi/dobirki-yakaboo/bestseleri-yakaboo-2023.html?book_publication=Bumazhnaja&price=0-50
+              - img [ref=e391] [cursor=pointer]
+            - generic [ref=e394]:
+              - link "PEN Ukraine 2023" [ref=e395] [cursor=pointer]:
+                - /url: /ua/knigi/dobirki-yakaboo/pen-ukraine-2023.html?book_publication=Bumazhnaja&price=0-50
+              - img [ref=e397] [cursor=pointer]
+            - link "Бестселери українських видавництв 2023" [ref=e401] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/bestseleri-ukrains-kih-vidavnictv-2023.html?book_publication=Bumazhnaja&price=0-50
+            - link "Хітові комікси 2023" [ref=e404] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/hitovi-komiksi-2023.html?book_publication=Bumazhnaja&price=0-50
+            - link "Михайло Федоров рекомендує" [ref=e407] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/mihajlo-fedorov-rekomendue.html?book_publication=Bumazhnaja&price=0-50
+            - link "День казки. Читаємо і слухаємо з ґаджетів" [ref=e410] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/den-kazki-chitaemo-i-sluhaemo-z-gadzhetiv.html?book_publication=Bumazhnaja&price=0-50
+            - link "Нова українська школа для 5-6 класу (НУШ)" [ref=e413] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/nova-ukrains-ka-shkola-dlja-5-6-klasu-nush.html?book_publication=Bumazhnaja&price=0-50
+            - link "Книжки з фотомистецтва" [ref=e416] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/knizhki-z-fotomistectva.html?book_publication=Bumazhnaja&price=0-50
+            - link "Вчимося писати краще" [ref=e419] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/vchimosja-pisati-krasche.html?book_publication=Bumazhnaja&price=0-50
+            - link "Скандинавські детективи" [ref=e422] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/skandinavs-ki-detektivi.html?book_publication=Bumazhnaja&price=0-50
+            - link "Екранізовані романи в електронному форматі" [ref=e425] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/ekranizovani-romani-v-elektronnomu-formati.html?book_publication=Bumazhnaja&price=0-50
+            - link "Найкращі романи про подорожі у часі" [ref=e428] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/najkraschi-romani-pro-podorozhi-u-chasi.html?book_publication=Bumazhnaja&price=0-50
+            - link "Щемливі історії, які подарують надію на краще" [ref=e431] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/tepli-istorii-dlja-holodnih-dniv.html?book_publication=Bumazhnaja&price=0-50
+            - link "В головній ролі - письменники та письменниці" [ref=e434] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/v-golovnij-roli-pis-menniki-ta-pis-mennici.html?book_publication=Bumazhnaja&price=0-50
+            - link "Лавреати премії Ганса Крістіана Андерсена" [ref=e437] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/lavreati-premii-gansa-kristiana-andersena.html?book_publication=Bumazhnaja&price=0-50
+            - link "Walter Scott Prize. Топ історичних романів сучасної Британії" [ref=e440] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/walter-scott-prize-top-istorichnih-romaniv-suchasnoi-britanii.html?book_publication=Bumazhnaja&price=0-50
+            - link "Захопливі книги про музику та музикантів" [ref=e443] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/zahoplivi-knigi-pro-muziku-ta-muzikantiv.html?book_publication=Bumazhnaja&price=0-50
+            - link "Премія «Г'юго» за найкращий фантастичний роман" [ref=e446] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/premija-g-jugo-za-najkraschij-roman.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "Визначні дебютні романи: від класики до сучасності" [ref=e449] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/debjutni-romani-jaki-zrobili-svoih-avtoriv-vidomimi.html?book_publication=Bumazhnaja&price=0-50
+            - link "Збірники кулінарних рецептів для затишних вечорів" [ref=e452] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/zbirniki-kulinarnih-receptiv-dlja-zatishnih-vechoriv.html?book_publication=Bumazhnaja&price=0-50
+            - link "Воєнна проза українських та іноземних авторів" [ref=e455] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/voenna-proza-ukrains-kih-ta-inozemnih-avtoriv.html?book_publication=Bumazhnaja&price=0-50
+            - link "Класичні п'єси, які варто прочитати кожному" [ref=e458] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/50-klasichnih-p-es-jaki-varto-prochitati-kozhnomu.html?book_publication=Bumazhnaja&price=0-50
+            - link "Лавреати Гонкурівської премії" [ref=e461] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/lavreati-gonkurivs-koi-premii.html?book_publication=Bumazhnaja&price=0-50
+            - link "Книжкова країна 2023. Видавничі хіти продажів" [ref=e464] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/knizhkova-kraina-vidavnichi-hiti-prodazhiv.html?book_publication=Bumazhnaja&price=0-50
+            - link "Мастріди про моду, одяг і стиль" [ref=e467] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/mastridi-pro-istoriju-ta-teoriju-modi.html?book_publication=Bumazhnaja&price=0-50
+            - link "Книжки, які мотивують на зміни" [ref=e470] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/knizhki-jaki-motivujut-na-zmini.html?book_publication=Bumazhnaja&price=0-50
+            - link "Все про бізнес та гроші" [ref=e473] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/vse-pro-biznes-ta-groshi.html?book_publication=Bumazhnaja&price=0-50
+            - link "Найкращі книги XXI століття - версія The New York Times" [ref=e476] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/najkraschi-knigi-xxi-stolittja-versija-the-new-york-times.html?book_publication=Bumazhnaja&price=0-50
+            - link "Книжковий топ від клубу Різ Візерспун" [ref=e479] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/knizhkovij-top-vid-klubu-riz-vizerspun.html?book_publication=Bumazhnaja&price=0-50
+            - link "Переможниці Women's Prize for Fiction" [ref=e482] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/peremozhnici-women-s-prize-for-fiction.html?book_publication=Bumazhnaja&price=0-50
+            - link "Вибрані книжки від читацького клубу Наталі Портман" [ref=e485] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/vibrani-knizhki-vid-chitac-kogo-klubu-natali-portman.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "Історична література: пориньте у минуле" [ref=e488] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/istorichna-literatura-porin-te-u-minule.html?book_publication=Bumazhnaja&price=0-50
+            - link "Біографії знакових постатей" [ref=e491] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/biografii-znakovih-postatej.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "Епічні світи: культові фентезійні цикли" [ref=e494] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/epichni-sviti-kul-tovi-fentezijni-cikli.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "Цікаво, смачно, корисно: нонфікшн про їжу" [ref=e497] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/cikavo-smachno-korisno-nonfikshn-pro-izhu.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "єКнига: Тут вайб сучасного" [ref=e500] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/ekniga-pidlitkovij-vsesvit-molodizhna-proza.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "єКнига: Всесвіт коміксів для епічних емоцій" [ref=e503] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/ekniga-mal-ovani-prigodi-komiksi-ta-manga.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "єКнига: Пізнати себе – пізнати світ" [ref=e506] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/ekniga-kroki-do-sebe-doroslishannja-hobi-osvita.html?book_publication=Bumazhnaja&price=0-50
+            - link "Комплекти для карток «єКнига»" [ref=e509] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/komplekti-ekniga.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "Українські автори: спадок і сьогодення" [ref=e512] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/ekniga-chitaemo-ukrains-ke.html?book_publication=Bumazhnaja&price=0-50
+            - link "Сильні жінки – потужні історії" [ref=e515] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/sil-ni-zhinki-potuzhni-istorii.html?book_publication=Bumazhnaja&price=0-50
+            - link "Сила доробку Великого Кобзаря" [ref=e518] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/sila-dorobku-velikogo-kobzarja.html?book_publication=Bumazhnaja&price=0-50
+            - link "Поезія – то подорож у світ емоцій" [ref=e521] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/poezija-to-podorozh-u-svit-emocij.html?book_publication=Bumazhnaja&price=0-50
+            - link "Досліджуйте красу мови" [ref=e524] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/doslidzhujte-krasu-movi.html?book_publication=Bumazhnaja&price=0-50
+            - link "Бібліотека Minecraft" [ref=e527] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/biblioteka-minecraft.html?book_publication=Bumazhnaja&price=0-50
+            - link "Бібліотека азійських авторів" [ref=e530] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/biblioteka-azijs-kih-avtoriv.html?book_publication=Bumazhnaja&price=0-50
+            - 'link "Класика: нове життя великих творів" [ref=e533] [cursor=pointer]':
+              - /url: /ua/knigi/dobirki-yakaboo/klasika-nove-zhittja-velikih-tvoriv.html?book_publication=Bumazhnaja&price=0-50
+            - link "Хіти останніх 100 років від Goodreads" [ref=e536] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/hiti-ostannih-100-rokiv-vid-goodreads.html?book_publication=Bumazhnaja&price=0-50
+            - link "Лавреати Міжнародної премії Букера" [ref=e539] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/lavreati-mizhnarodnoi-premii-bukera.html?book_publication=Bumazhnaja&price=0-50
+            - link "Манга англійською — популярні серії та новинки" [ref=e542] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/manga-anglijs-koju-populjarni-serii-ta-novinki.html?book_publication=Bumazhnaja&price=0-50
+            - link "Що читає Yakaboo" [ref=e545] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/vibir-komandi-yakaboo.html?book_publication=Bumazhnaja&price=0-50
+            - link "Читаємо англійською взимку" [ref=e548] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo/chitaemo-anglijs-koju-vzimku.html?book_publication=Bumazhnaja&price=0-50
+        - generic [ref=e551]:
+          - generic [ref=e552] [cursor=pointer]:
+            - generic [ref=e553]: Акції
+            - img [ref=e555]
+          - generic [ref=e558]:
+            - link "Знижка" [ref=e559] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo.html?book_publication=Bumazhnaja&price=0-50&special_price=true
+              - generic [ref=e561]:
+                - checkbox "Знижка" [ref=e562]
+                - img [ref=e563]
+                - generic [ref=e565]: Знижка
+            - link "Хіти продажу" [ref=e566] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo.html?book_publication=Bumazhnaja&price=0-50&is_top_sale=true
+              - generic [ref=e568]:
+                - checkbox "Хіти продажу" [ref=e569]
+                - img [ref=e570]
+                - generic [ref=e572]: Хіти продажу
+            - link "єКнига" [ref=e573] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo.html?book_publication=Bumazhnaja&price=0-50&promotion_ids=1273
+              - generic [ref=e575]:
+                - checkbox "єКнига" [ref=e576]
+                - img [ref=e577]
+                - generic [ref=e579]: єКнига
+            - link "Зимова єПідтримка" [ref=e580] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo.html?book_publication=Bumazhnaja&price=0-50&promotion_ids=1266
+              - generic [ref=e582]:
+                - checkbox "Зимова єПідтримка" [ref=e583]
+                - img [ref=e584]
+                - generic [ref=e586]: Зимова єПідтримка
+            - link "Національний кешбек" [ref=e587] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo.html?book_publication=Bumazhnaja&price=0-50&promotion_ids=1239
+              - generic [ref=e589]:
+                - checkbox "Національний кешбек" [ref=e590]
+                - img [ref=e591]
+                - generic [ref=e593]: Національний кешбек
+        - generic [ref=e596]:
+          - generic [ref=e597] [cursor=pointer]:
+            - generic [ref=e598]: Формат книг
+            - img [ref=e600]
+          - generic [ref=e603]:
+            - link "Паперова" [ref=e604] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo.html?price=0-50
+              - generic [ref=e606]:
+                - checkbox "Паперова" [checked] [ref=e607]
+                - img [ref=e608]
+                - generic [ref=e610]: Паперова
+            - link "Електронна" [ref=e611] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo.html?book_publication=Bumazhnaja&book_publication=Jelektronnaja&price=0-50
+              - generic [ref=e613]:
+                - checkbox "Електронна" [ref=e614]
+                - img [ref=e615]
+                - generic [ref=e617]: Електронна
+            - link "Аудіо" [ref=e618] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo.html?book_publication=Bumazhnaja&book_publication=Audio&price=0-50
+              - generic [ref=e620]:
+                - checkbox "Аудіо" [ref=e621]
+                - img [ref=e622]
+                - generic [ref=e624]: Аудіо
+        - generic [ref=e627]:
+          - generic [ref=e628] [cursor=pointer]:
+            - generic [ref=e629]: Наявність
+            - img [ref=e631]
+          - generic [ref=e634]:
+            - link "Товари в наявності" [ref=e635] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo.html?book_publication=Bumazhnaja&price=0-50&for_filter_is_in_stock=Tovary_v_nalichii
+              - generic [ref=e637]:
+                - checkbox "Товари в наявності" [ref=e638]
+                - img [ref=e639]
+                - generic [ref=e641]: Товари в наявності
+            - link "Товари під замовлення" [ref=e642] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo.html?book_publication=Bumazhnaja&price=0-50&for_filter_is_in_stock=Tovary_pid_zamovlennya
+              - generic [ref=e644]:
+                - checkbox "Товари під замовлення" [ref=e645]
+                - img [ref=e646]
+                - generic [ref=e648]: Товари під замовлення
+        - generic "видавництво" [ref=e650]:
+          - generic [ref=e651]:
+            - generic [ref=e652] [cursor=pointer]:
+              - generic [ref=e653]: видавництво
+              - img [ref=e655]
+            - generic [ref=e657]:
+              - generic [ref=e658]:
+                - textbox "Пошук видавництва" [ref=e662]
+                - button [ref=e663] [cursor=pointer]:
+                  - img [ref=e664]
+              - generic [ref=e666]:
+                - link "Фоліо" [ref=e667] [cursor=pointer]:
+                  - /url: /ua/knigi/dobirki-yakaboo.html?book_publication=Bumazhnaja&price=0-50&book_publisher=Folio
+                  - generic [ref=e669]:
+                    - checkbox "Фоліо" [ref=e670]
+                    - img [ref=e671]
+                    - generic [ref=e673]: Фоліо
+                - link "Ранок. Наочні посібники" [ref=e674] [cursor=pointer]:
+                  - /url: /ua/knigi/dobirki-yakaboo.html?book_publication=Bumazhnaja&price=0-50&book_publisher=ranok-visual-handbooks
+                  - generic [ref=e676]:
+                    - checkbox "Ранок. Наочні посібники" [ref=e677]
+                    - img [ref=e678]
+                    - generic [ref=e680]: Ранок. Наочні посібники
+                - link "Торсінг" [ref=e681] [cursor=pointer]:
+                  - /url: /ua/knigi/dobirki-yakaboo.html?book_publication=Bumazhnaja&price=0-50&book_publisher=Torsing_pljus
+                  - generic [ref=e683]:
+                    - checkbox "Торсінг" [ref=e684]
+                    - img [ref=e685]
+                    - generic [ref=e687]: Торсінг
+                - link "Арій" [ref=e688] [cursor=pointer]:
+                  - /url: /ua/knigi/dobirki-yakaboo.html?book_publication=Bumazhnaja&price=0-50&book_publisher=Arij
+                  - generic [ref=e690]:
+                    - checkbox "Арій" [ref=e691]
+                    - img [ref=e692]
+                    - generic [ref=e694]: Арій
+                - link "УЛА" [ref=e695] [cursor=pointer]:
+                  - /url: /ua/knigi/dobirki-yakaboo.html?book_publication=Bumazhnaja&price=0-50&book_publisher=ULA
+                  - generic [ref=e697]:
+                    - checkbox "УЛА" [ref=e698]
+                    - img [ref=e699]
+                    - generic [ref=e701]: УЛА
+                - button "Показати всe" [ref=e702] [cursor=pointer]:
+                  - generic [ref=e703]: Показати всe
+                  - img [ref=e704]
+        - generic [ref=e708]:
+          - generic [ref=e709] [cursor=pointer]:
+            - generic [ref=e710]: Мова
+            - img [ref=e712]
+          - generic [ref=e715]:
+            - link "Українська" [ref=e716] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo.html?book_publication=Bumazhnaja&price=0-50&book_lang=Ukrainskij
+              - generic [ref=e718]:
+                - checkbox "Українська" [ref=e719]
+                - img [ref=e720]
+                - generic [ref=e722]: Українська
+            - link "Англійська" [ref=e723] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo.html?book_publication=Bumazhnaja&price=0-50&book_lang=Anglijskij
+              - generic [ref=e725]:
+                - checkbox "Англійська" [ref=e726]
+                - img [ref=e727]
+                - generic [ref=e729]: Англійська
+        - generic "автор" [ref=e731]:
+          - generic [ref=e732]:
+            - generic [ref=e733] [cursor=pointer]:
+              - generic [ref=e734]: автор
+              - img [ref=e736]
+            - generic [ref=e738]:
+              - generic [ref=e739]:
+                - textbox "Пошук автори" [ref=e743]
+                - button [ref=e744] [cursor=pointer]:
+                  - img [ref=e745]
+              - generic [ref=e747]:
+                - link "Оксана Алліна" [ref=e748] [cursor=pointer]:
+                  - /url: /ua/knigi/dobirki-yakaboo.html?book_publication=Bumazhnaja&price=0-50&author=Oksana_Allina
+                  - generic [ref=e750]:
+                    - checkbox "Оксана Алліна" [ref=e751]
+                    - img [ref=e752]
+                    - generic [ref=e754]: Оксана Алліна
+                - link "Олена Чхайло" [ref=e755] [cursor=pointer]:
+                  - /url: /ua/knigi/dobirki-yakaboo.html?book_publication=Bumazhnaja&price=0-50&author=elena-chhajlo-o-chhajlo
+                  - generic [ref=e757]:
+                    - checkbox "Олена Чхайло" [ref=e758]
+                    - img [ref=e759]
+                    - generic [ref=e761]: Олена Чхайло
+                - link "Володимир Верховень" [ref=e762] [cursor=pointer]:
+                  - /url: /ua/knigi/dobirki-yakaboo.html?book_publication=Bumazhnaja&price=0-50&author=Vladimir_Verhoven_
+                  - generic [ref=e764]:
+                    - checkbox "Володимир Верховень" [ref=e765]
+                    - img [ref=e766]
+                    - generic [ref=e768]: Володимир Верховень
+                - link "Юлія Чіміріс" [ref=e769] [cursor=pointer]:
+                  - /url: /ua/knigi/dobirki-yakaboo.html?book_publication=Bumazhnaja&price=0-50&author=Julija_Chimiris
+                  - generic [ref=e771]:
+                    - checkbox "Юлія Чіміріс" [ref=e772]
+                    - img [ref=e773]
+                    - generic [ref=e775]: Юлія Чіміріс
+                - link "Людмила Кієнко" [ref=e776] [cursor=pointer]:
+                  - /url: /ua/knigi/dobirki-yakaboo.html?book_publication=Bumazhnaja&price=0-50&author=Ljudmila_Kienko
+                  - generic [ref=e778]:
+                    - checkbox "Людмила Кієнко" [ref=e779]
+                    - img [ref=e780]
+                    - generic [ref=e782]: Людмила Кієнко
+                - button "Показати всe" [ref=e783] [cursor=pointer]:
+                  - generic [ref=e784]: Показати всe
+                  - img [ref=e785]
+        - generic "Ціна" [ref=e788]:
+          - generic [ref=e789]:
+            - generic [ref=e790] [cursor=pointer]:
+              - generic [ref=e791]: Ціна
+              - img [ref=e793]
+            - generic [ref=e796]:
+              - generic [ref=e797]:
+                - generic [ref=e800]:
+                  - generic [ref=e801]: від
+                  - spinbutton [ref=e802]: "0"
+                - generic [ref=e805]:
+                  - generic [ref=e806]: до
+                  - spinbutton [ref=e807]: "50"
+              - button "Застосувати" [active] [ref=e809] [cursor=pointer]
+      - generic [ref=e810]:
+        - generic [ref=e811]:
+          - generic [ref=e812]:
+            - generic [ref=e813] [cursor=pointer]:
+              - generic [ref=e814]: Паперова
+              - img [ref=e816]
+            - generic [ref=e820] [cursor=pointer]:
+              - generic [ref=e821]: 0 грн - 50 грн
+              - img [ref=e823]
+            - generic [ref=e827] [cursor=pointer]: Очистити все
+          - generic [ref=e828]:
+            - generic [ref=e829]:
+              - heading "Добірки Yakaboo" [level=1] [ref=e830]
+              - generic [ref=e831]: 138 товарів
+            - button "За популярністю" [ref=e833] [cursor=pointer]:
+              - img [ref=e835]
+              - generic [ref=e840]: За популярністю
+        - generic [ref=e842]:
+          - generic [ref=e844]:
+            - link "Паперова книга «Мами й малюки. Ліс», автор Катерина Смірнова – фото №1" [ref=e845] [cursor=pointer]:
+              - /url: /ua/kniga-mami-j-maljuki-lis.html
+              - generic [ref=e846]:
+                - img "Паперова книга «Мами й малюки. Ліс», автор Катерина Смірнова – фото №1" [ref=e848]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e850]:
+              - generic [ref=e852]:
+                - generic [ref=e853]:
+                  - generic [ref=e855]:
+                    - img [ref=e856]
+                    - generic [ref=e859]: "0"
+                  - generic [ref=e861]:
+                    - img [ref=e862]
+                    - generic [ref=e865]: "0"
+                - button "Топ" [ref=e866] [cursor=pointer]:
+                  - img [ref=e867]
+                  - text: Топ
+              - generic [ref=e871]:
+                - link "Мами й малюки. Ліс" [ref=e872] [cursor=pointer]:
+                  - /url: /ua/kniga-mami-j-maljuki-lis.html
+                - generic [ref=e873]: Катерина Смірнова
+              - generic [ref=e874]:
+                - generic [ref=e877]: 30 грн
+                - button [ref=e878] [cursor=pointer]:
+                  - img [ref=e879]
+              - generic [ref=e885]:
+                - img [ref=e886]
+                - generic [ref=e889]: +15 бонусів
+              - generic [ref=e891]:
+                - img [ref=e892]
+                - generic [ref=e895]: Доставка 10 днів
+          - generic [ref=e897]:
+            - link "Паперова книга «Тренажер для виправлення почерку. Широка лінійка», автор Людмила Кієнко – фото №1" [ref=e898] [cursor=pointer]:
+              - /url: /ua/trenazher-dlja-vipravlennja-pocherku-shiroka-linijka.html
+              - generic [ref=e899]:
+                - img "Паперова книга «Тренажер для виправлення почерку. Широка лінійка», автор Людмила Кієнко – фото №1" [ref=e901]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e903]:
+              - generic [ref=e905]:
+                - generic [ref=e906]:
+                  - generic [ref=e908]:
+                    - img [ref=e909]
+                    - generic [ref=e912]: "0"
+                  - generic [ref=e914]:
+                    - img [ref=e915]
+                    - generic [ref=e918]: "0"
+                - button "Топ" [ref=e919] [cursor=pointer]:
+                  - img [ref=e920]
+                  - text: Топ
+              - generic [ref=e924]:
+                - link "Тренажер для виправлення почерку. Широка лінійка" [ref=e925] [cursor=pointer]:
+                  - /url: /ua/trenazher-dlja-vipravlennja-pocherku-shiroka-linijka.html
+                - generic [ref=e926]: Людмила Кієнко
+              - generic [ref=e927]:
+                - generic [ref=e930]: 45 грн
+                - button [ref=e931] [cursor=pointer]:
+                  - img [ref=e932]
+              - generic [ref=e938]:
+                - img [ref=e939]
+                - generic [ref=e942]: +23 бонуси
+              - generic [ref=e944]:
+                - img [ref=e945]
+                - generic [ref=e948]: В наявності
+          - generic [ref=e950]:
+            - link "Паперова книга «Звірята готуються до Різдва (+ наліпки)», автор Олена Собчук – фото №1" [ref=e951] [cursor=pointer]:
+              - /url: /ua/zvirjata-gotujut-sja-do-rizdva-nalipki.html
+              - generic [ref=e952]:
+                - img "Паперова книга «Звірята готуються до Різдва (+ наліпки)», автор Олена Собчук – фото №1" [ref=e954]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e956]:
+              - generic [ref=e958]:
+                - generic [ref=e959]:
+                  - generic [ref=e961]:
+                    - img [ref=e962]
+                    - generic [ref=e965]: "0"
+                  - generic [ref=e967]:
+                    - img [ref=e968]
+                    - generic [ref=e971]: "0"
+                - button "Топ" [ref=e972] [cursor=pointer]:
+                  - img [ref=e973]
+                  - text: Топ
+              - generic [ref=e977]:
+                - link "Звірята готуються до Різдва (+ наліпки)" [ref=e978] [cursor=pointer]:
+                  - /url: /ua/zvirjata-gotujut-sja-do-rizdva-nalipki.html
+                - generic [ref=e979]: Олена Собчук
+              - generic [ref=e980]:
+                - generic [ref=e983]: 40 грн
+                - button [ref=e984] [cursor=pointer]:
+                  - img [ref=e985]
+              - generic [ref=e991]:
+                - img [ref=e992]
+                - generic [ref=e995]: +20 бонусів
+              - generic [ref=e997]:
+                - img [ref=e998]
+                - generic [ref=e1001]: В наявності
+          - generic [ref=e1003]:
+            - link "Паперова книга «Я відмінник! Контрольне списування. 2 клас» – фото №1" [ref=e1004] [cursor=pointer]:
+              - /url: /ua/ja-vidminnik-kontrol-ne-spisuvannja-2-klas.html
+              - generic [ref=e1005]:
+                - img "Паперова книга «Я відмінник! Контрольне списування. 2 клас» – фото №1" [ref=e1007]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e1009]:
+              - generic [ref=e1011]:
+                - generic [ref=e1012]:
+                  - generic [ref=e1014]:
+                    - img [ref=e1015]
+                    - generic [ref=e1018]: "4"
+                  - generic [ref=e1020]:
+                    - img [ref=e1021]
+                    - generic [ref=e1024]: "3"
+                - button "Топ" [ref=e1025] [cursor=pointer]:
+                  - img [ref=e1026]
+                  - text: Топ
+              - link "Я відмінник! Контрольне списування. 2 клас" [ref=e1031] [cursor=pointer]:
+                - /url: /ua/ja-vidminnik-kontrol-ne-spisuvannja-2-klas.html
+              - generic [ref=e1033]:
+                - generic [ref=e1036]: 35 грн
+                - button [ref=e1037] [cursor=pointer]:
+                  - img [ref=e1038]
+              - generic [ref=e1044]:
+                - img [ref=e1045]
+                - generic [ref=e1048]: +18 бонусів
+              - generic [ref=e1050]:
+                - img [ref=e1051]
+                - generic [ref=e1054]: В наявності
+          - generic [ref=e1056]:
+            - link "Паперова книга «Найшвидший спосіб вивчити. Неправильні дієслова» – фото №1" [ref=e1057] [cursor=pointer]:
+              - /url: /ua/najshvidshij-sposib-vivchiti-nepravil-ni-dieslova.html
+              - generic [ref=e1058]:
+                - img "Паперова книга «Найшвидший спосіб вивчити. Неправильні дієслова» – фото №1" [ref=e1060]
+                - generic:
+                  - generic:
+                    - img
+            - generic [ref=e1062]:
+              - generic [ref=e1064]:
+                - generic [ref=e1065]:
+                  - generic [ref=e1067]:
+                    - img [ref=e1068]
+                    - generic [ref=e1071]: "5"
+                  - generic [ref=e1073]:
+                    - img [ref=e1074]
+                    - generic [ref=e1077]: "1"
+                - button "Топ" [ref=e1078] [cursor=pointer]:
+                  - img [ref=e1079]
+                  - text: Топ
+              - link "Найшвидший спосіб вивчити. Неправильні дієслова" [ref=e1084] [cursor=pointer]:
+                - /url: /ua/najshvidshij-sposib-vivchiti-nepravil-ni-dieslova.html
+              - generic [ref=e1086]:
+                - generic [ref=e1087]:
+                  - generic [ref=e1088]:
+                    - generic [ref=e1089]: 50 грн
+                    - generic [ref=e1090]: "-22%"
+                  - generic [ref=e1092]: 39 грн
+                - button [ref=e1093] [cursor=pointer]:
+                  - img [ref=e1094]
+              - generic [ref=e1100]:
+                - img [ref=e1101]
+                - generic [ref=e1104]: +20 бонусів
+              - generic [ref=e1106]:
+                - img [ref=e1107]
+                - generic [ref=e1110]: В наявності
+          - generic [ref=e1112]:
+            - link "Паперова книга «Звірята зустрічають Новий рік (+ наліпки)», автор Олена Собчук – фото №1" [ref=e1113] [cursor=pointer]:
+              - /url: /ua/zvirjata-zustrichajut-novij-rik-nalipki.html
+              - generic [ref=e1114]:
+                - img "Паперова книга «Звірята зустрічають Новий рік (+ наліпки)», автор Олена Собчук – фото №1" [ref=e1116]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e1118]:
+              - generic [ref=e1120]:
+                - generic [ref=e1121]:
+                  - generic [ref=e1123]:
+                    - img [ref=e1124]
+                    - generic [ref=e1127]: "0"
+                  - generic [ref=e1129]:
+                    - img [ref=e1130]
+                    - generic [ref=e1133]: "0"
+                - button "Топ" [ref=e1134] [cursor=pointer]:
+                  - img [ref=e1135]
+                  - text: Топ
+              - generic [ref=e1139]:
+                - link "Звірята зустрічають Новий рік (+ наліпки)" [ref=e1140] [cursor=pointer]:
+                  - /url: /ua/zvirjata-zustrichajut-novij-rik-nalipki.html
+                - generic [ref=e1141]: Олена Собчук
+              - generic [ref=e1142]:
+                - generic [ref=e1143]:
+                  - generic [ref=e1144]:
+                    - generic [ref=e1145]: 45 грн
+                    - generic [ref=e1146]: "-12%"
+                  - generic [ref=e1148]: 40 грн
+                - button [ref=e1149] [cursor=pointer]:
+                  - img [ref=e1150]
+              - generic [ref=e1156]:
+                - img [ref=e1157]
+                - generic [ref=e1160]: +20 бонусів
+              - generic [ref=e1162]:
+                - img [ref=e1163]
+                - generic [ref=e1166]: В наявності
+          - generic [ref=e1168]:
+            - link "Паперова книга « Довідник у таблицях. Фізика. 7 – 11 класи», автор Наталія Столяревська – фото №1" [ref=e1169] [cursor=pointer]:
+              - /url: /ua/dovidnik-u-tablicjah-fizika-7-11-klasi.html
+              - generic [ref=e1170]:
+                - img "Паперова книга « Довідник у таблицях. Фізика. 7 – 11 класи», автор Наталія Столяревська – фото №1" [ref=e1172]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e1174]:
+              - generic [ref=e1176]:
+                - generic [ref=e1177]:
+                  - generic [ref=e1179]:
+                    - img [ref=e1180]
+                    - generic [ref=e1183]: "0"
+                  - generic [ref=e1185]:
+                    - img [ref=e1186]
+                    - generic [ref=e1189]: "0"
+                - button "Топ" [ref=e1190] [cursor=pointer]:
+                  - img [ref=e1191]
+                  - text: Топ
+              - generic [ref=e1195]:
+                - link "Довідник у таблицях. Фізика. 7 – 11 класи" [ref=e1196] [cursor=pointer]:
+                  - /url: /ua/dovidnik-u-tablicjah-fizika-7-11-klasi.html
+                - generic [ref=e1197]: Наталія Столяревська
+              - generic [ref=e1198]:
+                - generic [ref=e1201]: 45 грн
+                - button [ref=e1202] [cursor=pointer]:
+                  - img [ref=e1203]
+              - generic [ref=e1209]:
+                - img [ref=e1210]
+                - generic [ref=e1213]: +23 бонуси
+              - generic [ref=e1215]:
+                - img [ref=e1216]
+                - generic [ref=e1219]: В наявності
+          - generic [ref=e1221]:
+            - link "Паперова книга «Довідник у таблицях. Алгебра. 7-11 класи», автор Олександр Роганін – фото №1" [ref=e1222] [cursor=pointer]:
+              - /url: /ua/dovidnik-u-tablicjah-algebra-7-11-klasi.html
+              - generic [ref=e1223]:
+                - img "Паперова книга «Довідник у таблицях. Алгебра. 7-11 класи», автор Олександр Роганін – фото №1" [ref=e1225]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e1227]:
+              - generic [ref=e1229]:
+                - generic [ref=e1230]:
+                  - generic [ref=e1232]:
+                    - img [ref=e1233]
+                    - generic [ref=e1236]: "5"
+                  - generic [ref=e1238]:
+                    - img [ref=e1239]
+                    - generic [ref=e1242]: "1"
+                - button "Топ" [ref=e1243] [cursor=pointer]:
+                  - img [ref=e1244]
+                  - text: Топ
+              - generic [ref=e1248]:
+                - link "Довідник у таблицях. Алгебра. 7-11 класи" [ref=e1249] [cursor=pointer]:
+                  - /url: /ua/dovidnik-u-tablicjah-algebra-7-11-klasi.html
+                - generic [ref=e1250]: Олександр Роганін
+              - generic [ref=e1251]:
+                - generic [ref=e1254]: 45 грн
+                - button [ref=e1255] [cursor=pointer]:
+                  - img [ref=e1256]
+              - generic [ref=e1262]:
+                - img [ref=e1263]
+                - generic [ref=e1266]: +23 бонуси
+              - generic [ref=e1268]:
+                - img [ref=e1269]
+                - generic [ref=e1272]: В наявності
+          - generic [ref=e1274]:
+            - link "Паперова книга «Чарівна зима. Котик. Наліпки», авторів Оксана Алліна, Оксана Алліна – фото №1" [ref=e1275] [cursor=pointer]:
+              - /url: /ua/charivna-zima-kotik-nalipki.html
+              - generic [ref=e1276]:
+                - img "Паперова книга «Чарівна зима. Котик. Наліпки», авторів Оксана Алліна, Оксана Алліна – фото №1" [ref=e1278]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e1280]:
+              - generic [ref=e1282]:
+                - generic [ref=e1283]:
+                  - generic [ref=e1285]:
+                    - img [ref=e1286]
+                    - generic [ref=e1289]: "3"
+                  - generic [ref=e1291]:
+                    - img [ref=e1292]
+                    - generic [ref=e1295]: "1"
+                - button "Топ" [ref=e1296] [cursor=pointer]:
+                  - img [ref=e1297]
+                  - text: Топ
+              - generic [ref=e1301]:
+                - link "Чарівна зима. Котик. Наліпки" [ref=e1302] [cursor=pointer]:
+                  - /url: /ua/charivna-zima-kotik-nalipki.html
+                - generic [ref=e1303]: Оксана Алліна
+              - generic [ref=e1304]:
+                - generic [ref=e1307]: 35 грн
+                - button [ref=e1308] [cursor=pointer]:
+                  - img [ref=e1309]
+              - generic [ref=e1315]:
+                - img [ref=e1316]
+                - generic [ref=e1319]: +18 бонусів
+              - generic [ref=e1321]:
+                - img [ref=e1322]
+                - generic [ref=e1325]: В наявності
+          - generic [ref=e1327]:
+            - link "Паперова книга «Миколай уже близенько » – фото №1" [ref=e1328] [cursor=pointer]:
+              - /url: /ua/mikolaj-uzhe-blizen-ko.html
+              - generic [ref=e1329]:
+                - img "Паперова книга «Миколай уже близенько » – фото №1" [ref=e1331]
+                - generic:
+                  - generic:
+                    - img
+            - generic [ref=e1333]:
+              - generic [ref=e1335]:
+                - generic [ref=e1336]:
+                  - generic [ref=e1338]:
+                    - img [ref=e1339]
+                    - generic [ref=e1342]: "0"
+                  - generic [ref=e1344]:
+                    - img [ref=e1345]
+                    - generic [ref=e1348]: "0"
+                - button "Топ" [ref=e1349] [cursor=pointer]:
+                  - img [ref=e1350]
+                  - text: Топ
+              - link "Миколай уже близенько" [ref=e1355] [cursor=pointer]:
+                - /url: /ua/mikolaj-uzhe-blizen-ko.html
+              - generic [ref=e1357]:
+                - generic [ref=e1358]:
+                  - generic [ref=e1359]:
+                    - generic [ref=e1360]: 28 грн
+                    - generic [ref=e1361]: "-15%"
+                  - generic [ref=e1363]: 24 грн
+                - button [ref=e1364] [cursor=pointer]:
+                  - img [ref=e1365]
+              - generic [ref=e1371]:
+                - img [ref=e1372]
+                - generic [ref=e1375]: +12 бонусів
+              - generic [ref=e1377]:
+                - img [ref=e1378]
+                - generic [ref=e1381]: В наявності
+          - generic [ref=e1383]:
+            - link "Паперова книга «Як равлик друга шукав / How a Snail finds a Friend», автор Маріана Рудницька – фото №1" [ref=e1384] [cursor=pointer]:
+              - /url: /ua/jak-ravlik-druga-shukav-how-a-snail-finds-a-friend.html
+              - generic [ref=e1385]:
+                - img "Паперова книга «Як равлик друга шукав / How a Snail finds a Friend», автор Маріана Рудницька – фото №1" [ref=e1387]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e1389]:
+              - generic [ref=e1391]:
+                - generic [ref=e1392]:
+                  - generic [ref=e1394]:
+                    - img [ref=e1395]
+                    - generic [ref=e1398]: "0"
+                  - generic [ref=e1400]:
+                    - img [ref=e1401]
+                    - generic [ref=e1404]: "0"
+                - button "Топ" [ref=e1405] [cursor=pointer]:
+                  - img [ref=e1406]
+                  - text: Топ
+              - generic [ref=e1410]:
+                - link "Як равлик друга шукав / How a Snail finds a Friend" [ref=e1411] [cursor=pointer]:
+                  - /url: /ua/jak-ravlik-druga-shukav-how-a-snail-finds-a-friend.html
+                - generic [ref=e1412]: Маріана Рудницька
+              - generic [ref=e1413]:
+                - generic [ref=e1414]:
+                  - generic [ref=e1415]:
+                    - generic [ref=e1416]: 63 грн
+                    - generic [ref=e1417]: "-21%"
+                  - generic [ref=e1419]: 50 грн
+                - button [ref=e1420] [cursor=pointer]:
+                  - img [ref=e1421]
+              - generic [ref=e1427]:
+                - img [ref=e1428]
+                - generic [ref=e1431]: +25 бонусів
+              - generic [ref=e1433]:
+                - img [ref=e1434]
+                - generic [ref=e1437]: В наявності
+          - generic [ref=e1439]:
+            - link "Паперова книга «Чарівна зима. Їжачок. Наліпки», авторів Оксана Алліна, Оксана Алліна – фото №1" [ref=e1440] [cursor=pointer]:
+              - /url: /ua/charivna-zima-izhachok-nalipki.html
+              - generic [ref=e1441]:
+                - img "Паперова книга «Чарівна зима. Їжачок. Наліпки», авторів Оксана Алліна, Оксана Алліна – фото №1" [ref=e1443]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e1445]:
+              - generic [ref=e1447]:
+                - generic [ref=e1448]:
+                  - generic [ref=e1450]:
+                    - img [ref=e1451]
+                    - generic [ref=e1454]: "0"
+                  - generic [ref=e1456]:
+                    - img [ref=e1457]
+                    - generic [ref=e1460]: "0"
+                - button "Топ" [ref=e1461] [cursor=pointer]:
+                  - img [ref=e1462]
+                  - text: Топ
+              - generic [ref=e1466]:
+                - link "Чарівна зима. Їжачок. Наліпки" [ref=e1467] [cursor=pointer]:
+                  - /url: /ua/charivna-zima-izhachok-nalipki.html
+                - generic [ref=e1468]: Оксана Алліна
+              - generic [ref=e1469]:
+                - generic [ref=e1472]: 35 грн
+                - button [ref=e1473] [cursor=pointer]:
+                  - img [ref=e1474]
+              - generic [ref=e1480]:
+                - img [ref=e1481]
+                - generic [ref=e1484]: +18 бонусів
+              - generic [ref=e1486]:
+                - img [ref=e1487]
+                - generic [ref=e1490]: В наявності
+          - generic [ref=e1492]:
+            - link "Паперова книга «Тренажер з англійської мови. Reading. 1 клас», автор Юлія Чіміріс – фото №1" [ref=e1493] [cursor=pointer]:
+              - /url: /ua/kniga-trenazher-z-anglijs-koi-movi-reading-1-klas.html
+              - generic [ref=e1494]:
+                - img "Паперова книга «Тренажер з англійської мови. Reading. 1 клас», автор Юлія Чіміріс – фото №1" [ref=e1496]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e1498]:
+              - generic [ref=e1500]:
+                - generic [ref=e1501]:
+                  - generic [ref=e1503]:
+                    - img [ref=e1504]
+                    - generic [ref=e1507]: "5"
+                  - generic [ref=e1509]:
+                    - img [ref=e1510]
+                    - generic [ref=e1513]: "2"
+                - button "Топ" [ref=e1514] [cursor=pointer]:
+                  - img [ref=e1515]
+                  - text: Топ
+              - generic [ref=e1519]:
+                - link "Тренажер з англійської мови. Reading. 1 клас" [ref=e1520] [cursor=pointer]:
+                  - /url: /ua/kniga-trenazher-z-anglijs-koi-movi-reading-1-klas.html
+                - generic [ref=e1521]: Юлія Чіміріс
+              - generic [ref=e1522]:
+                - generic [ref=e1525]: 48 грн
+                - button [ref=e1526] [cursor=pointer]:
+                  - img [ref=e1527]
+              - generic [ref=e1533]:
+                - img [ref=e1534]
+                - generic [ref=e1537]: +24 бонуси
+              - generic [ref=e1539]:
+                - img [ref=e1540]
+                - generic [ref=e1543]: В наявності
+          - generic [ref=e1545]:
+            - link "Паперова книга «Лист Святому Миколаю для тих, хто вже вміє писати» – фото №1" [ref=e1546] [cursor=pointer]:
+              - /url: /ua/list-svjatomu-mikolaju-hto-vmie-pisati.html
+              - img "Паперова книга «Лист Святому Миколаю для тих, хто вже вміє писати» – фото №1" [ref=e1549]
+            - generic [ref=e1551]:
+              - generic [ref=e1553]:
+                - generic [ref=e1554]:
+                  - generic [ref=e1556]:
+                    - img [ref=e1557]
+                    - generic [ref=e1560]: "0"
+                  - generic [ref=e1562]:
+                    - img [ref=e1563]
+                    - generic [ref=e1566]: "0"
+                - button "Топ" [ref=e1567] [cursor=pointer]:
+                  - img [ref=e1568]
+                  - text: Топ
+              - link "Лист Святому Миколаю для тих, хто вже вміє писати" [ref=e1573] [cursor=pointer]:
+                - /url: /ua/list-svjatomu-mikolaju-hto-vmie-pisati.html
+              - generic [ref=e1575]:
+                - generic [ref=e1576]:
+                  - generic [ref=e1577]:
+                    - generic [ref=e1578]: 27 грн
+                    - generic [ref=e1579]: "-23%"
+                  - generic [ref=e1581]: 21 грн
+                - button [ref=e1582] [cursor=pointer]:
+                  - img [ref=e1583]
+              - generic [ref=e1589]:
+                - img [ref=e1590]
+                - generic [ref=e1593]: +11 бонусів
+              - generic [ref=e1595]:
+                - img [ref=e1596]
+                - generic [ref=e1599]: В наявності
+          - generic [ref=e1601]:
+            - link "Паперова книга «Розваги в чарівному лісі (+ наліпки)», автор Олена Собчук – фото №1" [ref=e1602] [cursor=pointer]:
+              - /url: /ua/rozvagi-v-charivnomu-lisi-nalipki.html
+              - generic [ref=e1603]:
+                - img "Паперова книга «Розваги в чарівному лісі (+ наліпки)», автор Олена Собчук – фото №1" [ref=e1605]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e1607]:
+              - generic [ref=e1609]:
+                - generic [ref=e1610]:
+                  - generic [ref=e1612]:
+                    - img [ref=e1613]
+                    - generic [ref=e1616]: "0"
+                  - generic [ref=e1618]:
+                    - img [ref=e1619]
+                    - generic [ref=e1622]: "0"
+                - button "Топ" [ref=e1623] [cursor=pointer]:
+                  - img [ref=e1624]
+                  - text: Топ
+              - generic [ref=e1628]:
+                - link "Розваги в чарівному лісі (+ наліпки)" [ref=e1629] [cursor=pointer]:
+                  - /url: /ua/rozvagi-v-charivnomu-lisi-nalipki.html
+                - generic [ref=e1630]: Олена Собчук
+              - generic [ref=e1631]:
+                - generic [ref=e1632]:
+                  - generic [ref=e1633]:
+                    - generic [ref=e1634]: 45 грн
+                    - generic [ref=e1635]: "-12%"
+                  - generic [ref=e1637]: 40 грн
+                - button [ref=e1638] [cursor=pointer]:
+                  - img [ref=e1639]
+              - generic [ref=e1645]:
+                - img [ref=e1646]
+                - generic [ref=e1649]: +20 бонусів
+              - generic [ref=e1651]:
+                - img [ref=e1652]
+                - generic [ref=e1655]: В наявності
+          - generic [ref=e1657]:
+            - link "Паперова книга «Довідник у таблицях. Англійська мова. 7 – 11 класи», автор Юлія Чіміріс – фото №1" [ref=e1658] [cursor=pointer]:
+              - /url: /ua/dovidnik-u-tablicjah-anglijs-ka-mova-7-11-klasi.html
+              - generic [ref=e1659]:
+                - img "Паперова книга «Довідник у таблицях. Англійська мова. 7 – 11 класи», автор Юлія Чіміріс – фото №1" [ref=e1661]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e1663]:
+              - generic [ref=e1665]:
+                - generic [ref=e1666]:
+                  - generic [ref=e1668]:
+                    - img [ref=e1669]
+                    - generic [ref=e1672]: "0"
+                  - generic [ref=e1674]:
+                    - img [ref=e1675]
+                    - generic [ref=e1678]: "0"
+                - button "Топ" [ref=e1679] [cursor=pointer]:
+                  - img [ref=e1680]
+                  - text: Топ
+              - generic [ref=e1684]:
+                - link "Довідник у таблицях. Англійська мова. 7 – 11 класи" [ref=e1685] [cursor=pointer]:
+                  - /url: /ua/dovidnik-u-tablicjah-anglijs-ka-mova-7-11-klasi.html
+                - generic [ref=e1686]: Юлія Чіміріс
+              - generic [ref=e1687]:
+                - generic [ref=e1690]: 45 грн
+                - button [ref=e1691] [cursor=pointer]:
+                  - img [ref=e1692]
+              - generic [ref=e1698]:
+                - img [ref=e1699]
+                - generic [ref=e1702]: +23 бонуси
+              - generic [ref=e1704]:
+                - img [ref=e1705]
+                - generic [ref=e1708]: В наявності
+          - generic [ref=e1710]:
+            - link "Паперова книга «Подарунок для котика (+ наліпки)», автор Оксана Алліна – фото №1" [ref=e1711] [cursor=pointer]:
+              - /url: /ua/podarunok-dlja-kotika.html
+              - generic [ref=e1712]:
+                - img "Паперова книга «Подарунок для котика (+ наліпки)», автор Оксана Алліна – фото №1" [ref=e1714]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e1716]:
+              - generic [ref=e1718]:
+                - generic [ref=e1719]:
+                  - generic [ref=e1721]:
+                    - img [ref=e1722]
+                    - generic [ref=e1725]: "0"
+                  - generic [ref=e1727]:
+                    - img [ref=e1728]
+                    - generic [ref=e1731]: "0"
+                - button "Топ" [ref=e1732] [cursor=pointer]:
+                  - img [ref=e1733]
+                  - text: Топ
+              - generic [ref=e1737]:
+                - link "Подарунок для котика (+ наліпки)" [ref=e1738] [cursor=pointer]:
+                  - /url: /ua/podarunok-dlja-kotika.html
+                - generic [ref=e1739]: Оксана Алліна
+              - generic [ref=e1740]:
+                - generic [ref=e1743]: 35 грн
+                - button [ref=e1744] [cursor=pointer]:
+                  - img [ref=e1745]
+              - generic [ref=e1751]:
+                - img [ref=e1752]
+                - generic [ref=e1755]: +18 бонусів
+              - generic [ref=e1757]:
+                - img [ref=e1758]
+                - generic [ref=e1761]: В наявності
+          - generic [ref=e1763]:
+            - link "Паперова книга «Найшвидший спосіб вивчити. Правила англійської мови» – фото №1" [ref=e1764] [cursor=pointer]:
+              - /url: /ua/najshvidshij-sposib-vivchiti-pravila-anglijs-koi-movi.html
+              - generic [ref=e1765]:
+                - img "Паперова книга «Найшвидший спосіб вивчити. Правила англійської мови» – фото №1" [ref=e1767]
+                - generic:
+                  - generic:
+                    - img
+            - generic [ref=e1769]:
+              - generic [ref=e1771]:
+                - generic [ref=e1772]:
+                  - generic [ref=e1774]:
+                    - img [ref=e1775]
+                    - generic [ref=e1778]: "5"
+                  - generic [ref=e1780]:
+                    - img [ref=e1781]
+                    - generic [ref=e1784]: "1"
+                - button "Топ" [ref=e1785] [cursor=pointer]:
+                  - img [ref=e1786]
+                  - text: Топ
+              - link "Найшвидший спосіб вивчити. Правила англійської мови" [ref=e1791] [cursor=pointer]:
+                - /url: /ua/najshvidshij-sposib-vivchiti-pravila-anglijs-koi-movi.html
+              - generic [ref=e1793]:
+                - generic [ref=e1794]:
+                  - generic [ref=e1795]:
+                    - generic [ref=e1796]: 60 грн
+                    - generic [ref=e1797]: "-22%"
+                  - generic [ref=e1799]: 47 грн
+                - button [ref=e1800] [cursor=pointer]:
+                  - img [ref=e1801]
+              - generic [ref=e1807]:
+                - img [ref=e1808]
+                - generic [ref=e1811]: +24 бонуси
+              - generic [ref=e1813]:
+                - img [ref=e1814]
+                - generic [ref=e1817]: В наявності
+          - generic [ref=e1819]:
+            - link "Паперова книга «Отаман Іван Сірко», авторів Ігор Коляда, Євген Біба – фото №1" [ref=e1820] [cursor=pointer]:
+              - /url: /ua/otaman-van-s-rko-pb.html
+              - generic [ref=e1821]:
+                - img "Паперова книга «Отаман Іван Сірко», авторів Ігор Коляда, Євген Біба – фото №1" [ref=e1823]
+                - generic:
+                  - generic:
+                    - img
+            - generic [ref=e1825]:
+              - generic [ref=e1827]:
+                - generic [ref=e1828]:
+                  - generic [ref=e1830]:
+                    - img [ref=e1831]
+                    - generic [ref=e1834]: "5"
+                  - generic [ref=e1836]:
+                    - img [ref=e1837]
+                    - generic [ref=e1840]: "2"
+                - button "Топ" [ref=e1841] [cursor=pointer]:
+                  - img [ref=e1842]
+                  - text: Топ
+              - generic [ref=e1846]:
+                - link "Отаман Іван Сірко" [ref=e1847] [cursor=pointer]:
+                  - /url: /ua/otaman-van-s-rko-pb.html
+                - generic [ref=e1848]: Ігор Коляда
+              - generic [ref=e1849]:
+                - generic [ref=e1852]: 20 грн
+                - button [ref=e1853] [cursor=pointer]:
+                  - img [ref=e1854]
+              - generic [ref=e1860]:
+                - img [ref=e1861]
+                - generic [ref=e1864]: +10 бонусів
+              - generic [ref=e1866]:
+                - img [ref=e1867]
+                - generic [ref=e1870]: В наявності
+          - generic [ref=e1872]:
+            - link "Паперова книга «Веселі пригоди звірят (+ наліпки)», автор Олена Собчук – фото №1" [ref=e1873] [cursor=pointer]:
+              - /url: /ua/veseli-prigodi-zvirjat-nalipki.html
+              - generic [ref=e1874]:
+                - img "Паперова книга «Веселі пригоди звірят (+ наліпки)», автор Олена Собчук – фото №1" [ref=e1876]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e1878]:
+              - generic [ref=e1880]:
+                - generic [ref=e1881]:
+                  - generic [ref=e1883]:
+                    - img [ref=e1884]
+                    - generic [ref=e1887]: "0"
+                  - generic [ref=e1889]:
+                    - img [ref=e1890]
+                    - generic [ref=e1893]: "0"
+                - button "Топ" [ref=e1894] [cursor=pointer]:
+                  - img [ref=e1895]
+                  - text: Топ
+              - generic [ref=e1899]:
+                - link "Веселі пригоди звірят (+ наліпки)" [ref=e1900] [cursor=pointer]:
+                  - /url: /ua/veseli-prigodi-zvirjat-nalipki.html
+                - generic [ref=e1901]: Олена Собчук
+              - generic [ref=e1902]:
+                - generic [ref=e1903]:
+                  - generic [ref=e1904]:
+                    - generic [ref=e1905]: 45 грн
+                    - generic [ref=e1906]: "-12%"
+                  - generic [ref=e1908]: 40 грн
+                - button [ref=e1909] [cursor=pointer]:
+                  - img [ref=e1910]
+              - generic [ref=e1916]:
+                - img [ref=e1917]
+                - generic [ref=e1920]: +20 бонусів
+              - generic [ref=e1922]:
+                - img [ref=e1923]
+                - generic [ref=e1926]: В наявності
+          - generic [ref=e1928]:
+            - link "Паперова книга «Новорічні пригоди. Наліпки-одягалки. У лісі», автор Олена Чхайло – фото №1" [ref=e1929] [cursor=pointer]:
+              - /url: /ua/novorichni-prigodi-nalipki-odjagalki-u-lisi.html
+              - generic [ref=e1930]:
+                - img "Паперова книга «Новорічні пригоди. Наліпки-одягалки. У лісі», автор Олена Чхайло – фото №1" [ref=e1932]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e1934]:
+              - generic [ref=e1936]:
+                - generic [ref=e1937]:
+                  - generic [ref=e1939]:
+                    - img [ref=e1940]
+                    - generic [ref=e1943]: "0"
+                  - generic [ref=e1945]:
+                    - img [ref=e1946]
+                    - generic [ref=e1949]: "0"
+                - button "Топ" [ref=e1950] [cursor=pointer]:
+                  - img [ref=e1951]
+                  - text: Топ
+              - generic [ref=e1955]:
+                - link "Новорічні пригоди. Наліпки-одягалки. У лісі" [ref=e1956] [cursor=pointer]:
+                  - /url: /ua/novorichni-prigodi-nalipki-odjagalki-u-lisi.html
+                - generic [ref=e1957]: Олена Чхайло
+              - generic [ref=e1958]:
+                - generic [ref=e1961]: 35 грн
+                - button [ref=e1962] [cursor=pointer]:
+                  - img [ref=e1963]
+              - generic [ref=e1969]:
+                - img [ref=e1970]
+                - generic [ref=e1973]: +18 бонусів
+              - generic [ref=e1975]:
+                - img [ref=e1976]
+                - generic [ref=e1979]: В наявності
+          - generic [ref=e1981]:
+            - link "Паперова книга «Чарівна зима. Зайчик. Наліпки», авторів Оксана Алліна, Оксана Алліна – фото №1" [ref=e1982] [cursor=pointer]:
+              - /url: /ua/charivna-zima-zajchik-nalipki.html
+              - generic [ref=e1983]:
+                - img "Паперова книга «Чарівна зима. Зайчик. Наліпки», авторів Оксана Алліна, Оксана Алліна – фото №1" [ref=e1985]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e1987]:
+              - generic [ref=e1989]:
+                - generic [ref=e1990]:
+                  - generic [ref=e1992]:
+                    - img [ref=e1993]
+                    - generic [ref=e1996]: "0"
+                  - generic [ref=e1998]:
+                    - img [ref=e1999]
+                    - generic [ref=e2002]: "0"
+                - button "Топ" [ref=e2003] [cursor=pointer]:
+                  - img [ref=e2004]
+                  - text: Топ
+              - generic [ref=e2008]:
+                - link "Чарівна зима. Зайчик. Наліпки" [ref=e2009] [cursor=pointer]:
+                  - /url: /ua/charivna-zima-zajchik-nalipki.html
+                - generic [ref=e2010]: Оксана Алліна
+              - generic [ref=e2011]:
+                - generic [ref=e2014]: 35 грн
+                - button [ref=e2015] [cursor=pointer]:
+                  - img [ref=e2016]
+              - generic [ref=e2022]:
+                - img [ref=e2023]
+                - generic [ref=e2026]: +18 бонусів
+              - generic [ref=e2028]:
+                - img [ref=e2029]
+                - generic [ref=e2032]: В наявності
+          - generic [ref=e2034]:
+            - link "Паперова книга «Чарівна зима. Лисичка. Наліпки», авторів Оксана Алліна, Оксана Алліна – фото №1" [ref=e2035] [cursor=pointer]:
+              - /url: /ua/charivna-zima-lisichka-nalipki.html
+              - generic [ref=e2036]:
+                - img "Паперова книга «Чарівна зима. Лисичка. Наліпки», авторів Оксана Алліна, Оксана Алліна – фото №1" [ref=e2038]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e2040]:
+              - generic [ref=e2042]:
+                - generic [ref=e2043]:
+                  - generic [ref=e2045]:
+                    - img [ref=e2046]
+                    - generic [ref=e2049]: "0"
+                  - generic [ref=e2051]:
+                    - img [ref=e2052]
+                    - generic [ref=e2055]: "0"
+                - button "Топ" [ref=e2056] [cursor=pointer]:
+                  - img [ref=e2057]
+                  - text: Топ
+              - generic [ref=e2061]:
+                - link "Чарівна зима. Лисичка. Наліпки" [ref=e2062] [cursor=pointer]:
+                  - /url: /ua/charivna-zima-lisichka-nalipki.html
+                - generic [ref=e2063]: Оксана Алліна
+              - generic [ref=e2064]:
+                - generic [ref=e2067]: 35 грн
+                - button [ref=e2068] [cursor=pointer]:
+                  - img [ref=e2069]
+              - generic [ref=e2075]:
+                - img [ref=e2076]
+                - generic [ref=e2079]: +18 бонусів
+              - generic [ref=e2081]:
+                - img [ref=e2082]
+                - generic [ref=e2085]: В наявності
+          - generic [ref=e2087]:
+            - link "Паперова книга «Новорічні пригоди. Наліпки-одягалки. На святі», автор Олена Чхайло – фото №1" [ref=e2088] [cursor=pointer]:
+              - /url: /ua/novorichni-prigodi-nalipki-odjagalki-na-svjati.html
+              - generic [ref=e2089]:
+                - img "Паперова книга «Новорічні пригоди. Наліпки-одягалки. На святі», автор Олена Чхайло – фото №1" [ref=e2091]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e2093]:
+              - generic [ref=e2095]:
+                - generic [ref=e2096]:
+                  - generic [ref=e2098]:
+                    - img [ref=e2099]
+                    - generic [ref=e2102]: "0"
+                  - generic [ref=e2104]:
+                    - img [ref=e2105]
+                    - generic [ref=e2108]: "0"
+                - button "Топ" [ref=e2109] [cursor=pointer]:
+                  - img [ref=e2110]
+                  - text: Топ
+              - generic [ref=e2114]:
+                - link "Новорічні пригоди. Наліпки-одягалки. На святі" [ref=e2115] [cursor=pointer]:
+                  - /url: /ua/novorichni-prigodi-nalipki-odjagalki-na-svjati.html
+                - generic [ref=e2116]: Олена Чхайло
+              - generic [ref=e2117]:
+                - generic [ref=e2120]: 35 грн
+                - button [ref=e2121] [cursor=pointer]:
+                  - img [ref=e2122]
+              - generic [ref=e2128]:
+                - img [ref=e2129]
+                - generic [ref=e2132]: +18 бонусів
+              - generic [ref=e2134]:
+                - img [ref=e2135]
+                - generic [ref=e2138]: В наявності
+          - generic [ref=e2140]:
+            - link "Паперова книга «Каліграфічний зошит-шаблон. Адаптація руки до письма у стандартному зошиті в лінію. Зелений», автор Василь Федієнко – фото №1" [ref=e2141] [cursor=pointer]:
+              - /url: /ua/kaligrafichnij-zoshit-shablon-adaptacija-ruki-do-pis-ma-u-standartnomu-zoshiti-v-liniju-zelenij.html
+              - generic [ref=e2142]:
+                - img "Паперова книга «Каліграфічний зошит-шаблон. Адаптація руки до письма у стандартному зошиті в лінію. Зелений», автор Василь Федієнко – фото №1" [ref=e2144]
+                - generic:
+                  - generic:
+                    - img
+            - generic [ref=e2146]:
+              - generic [ref=e2148]:
+                - generic [ref=e2149]:
+                  - generic [ref=e2151]:
+                    - img [ref=e2152]
+                    - generic [ref=e2155]: "0"
+                  - generic [ref=e2157]:
+                    - img [ref=e2158]
+                    - generic [ref=e2161]: "0"
+                - button "Топ" [ref=e2162] [cursor=pointer]:
+                  - img [ref=e2163]
+                  - text: Топ
+              - generic [ref=e2167]:
+                - link "Каліграфічний зошит-шаблон. Адаптація руки до письма у стандартному зошиті в лінію. Зелений" [ref=e2168] [cursor=pointer]:
+                  - /url: /ua/kaligrafichnij-zoshit-shablon-adaptacija-ruki-do-pis-ma-u-standartnomu-zoshiti-v-liniju-zelenij.html
+                - generic [ref=e2169]: Василь Федієнко
+              - generic [ref=e2170]:
+                - generic [ref=e2173]: 20 грн
+                - button [ref=e2174] [cursor=pointer]:
+                  - img [ref=e2175]
+              - generic [ref=e2181]:
+                - img [ref=e2182]
+                - generic [ref=e2185]: +10 бонусів
+              - generic [ref=e2187]:
+                - img [ref=e2188]
+                - generic [ref=e2191]: В наявності
+          - generic [ref=e2193]:
+            - link "Паперова книга «Чарівна зима. Мишка. Наліпки», авторів Оксана Алліна, Оксана Алліна – фото №1" [ref=e2194] [cursor=pointer]:
+              - /url: /ua/charivna-zima-mishka-nalipki.html
+              - generic [ref=e2195]:
+                - img "Паперова книга «Чарівна зима. Мишка. Наліпки», авторів Оксана Алліна, Оксана Алліна – фото №1" [ref=e2197]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e2199]:
+              - generic [ref=e2201]:
+                - generic [ref=e2202]:
+                  - generic [ref=e2204]:
+                    - img [ref=e2205]
+                    - generic [ref=e2208]: "0"
+                  - generic [ref=e2210]:
+                    - img [ref=e2211]
+                    - generic [ref=e2214]: "0"
+                - button "Топ" [ref=e2215] [cursor=pointer]:
+                  - img [ref=e2216]
+                  - text: Топ
+              - generic [ref=e2220]:
+                - link "Чарівна зима. Мишка. Наліпки" [ref=e2221] [cursor=pointer]:
+                  - /url: /ua/charivna-zima-mishka-nalipki.html
+                - generic [ref=e2222]: Оксана Алліна
+              - generic [ref=e2223]:
+                - generic [ref=e2226]: 35 грн
+                - button [ref=e2227] [cursor=pointer]:
+                  - img [ref=e2228]
+              - generic [ref=e2234]:
+                - img [ref=e2235]
+                - generic [ref=e2238]: +18 бонусів
+              - generic [ref=e2240]:
+                - img [ref=e2241]
+                - generic [ref=e2244]: В наявності
+          - generic [ref=e2246]:
+            - link "Паперова книга «Тренажер з англійської мови. Reading. 4 клас», автор Юлія Чіміріс – фото №1" [ref=e2247] [cursor=pointer]:
+              - /url: /ua/kniga-trenazher-z-anglijs-koi-movi-reading-4-klas.html
+              - generic [ref=e2248]:
+                - img "Паперова книга «Тренажер з англійської мови. Reading. 4 клас», автор Юлія Чіміріс – фото №1" [ref=e2250]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e2252]:
+              - generic [ref=e2254]:
+                - generic [ref=e2255]:
+                  - generic [ref=e2257]:
+                    - img [ref=e2258]
+                    - generic [ref=e2261]: "0"
+                  - generic [ref=e2263]:
+                    - img [ref=e2264]
+                    - generic [ref=e2267]: "0"
+                - button "Топ" [ref=e2268] [cursor=pointer]:
+                  - img [ref=e2269]
+                  - text: Топ
+              - generic [ref=e2273]:
+                - link "Тренажер з англійської мови. Reading. 4 клас" [ref=e2274] [cursor=pointer]:
+                  - /url: /ua/kniga-trenazher-z-anglijs-koi-movi-reading-4-klas.html
+                - generic [ref=e2275]: Юлія Чіміріс
+              - generic [ref=e2276]:
+                - generic [ref=e2277]:
+                  - generic [ref=e2278]:
+                    - generic [ref=e2279]: 48 грн
+                    - generic [ref=e2280]: "-11%"
+                  - generic [ref=e2282]: 43 грн
+                - button [ref=e2283] [cursor=pointer]:
+                  - img [ref=e2284]
+              - generic [ref=e2290]:
+                - img [ref=e2291]
+                - generic [ref=e2294]: +22 бонуси
+              - generic [ref=e2296]:
+                - img [ref=e2297]
+                - generic [ref=e2300]: В наявності
+          - generic [ref=e2302]:
+            - link "Паперова книга «Лист Діду Морозу» – фото №1" [ref=e2303] [cursor=pointer]:
+              - /url: /ua/list-didu-morozu-2277188.html
+              - generic [ref=e2304]:
+                - img "Паперова книга «Лист Діду Морозу» – фото №1" [ref=e2306]
+                - generic:
+                  - generic:
+                    - img
+            - generic [ref=e2308]:
+              - generic [ref=e2310]:
+                - generic [ref=e2311]:
+                  - generic [ref=e2313]:
+                    - img [ref=e2314]
+                    - generic [ref=e2317]: "0"
+                  - generic [ref=e2319]:
+                    - img [ref=e2320]
+                    - generic [ref=e2323]: "0"
+                - button "Топ" [ref=e2324] [cursor=pointer]:
+                  - img [ref=e2325]
+                  - text: Топ
+              - link "Лист Діду Морозу" [ref=e2330] [cursor=pointer]:
+                - /url: /ua/list-didu-morozu-2277188.html
+              - generic [ref=e2332]:
+                - generic [ref=e2335]: 35 грн
+                - button [ref=e2336] [cursor=pointer]:
+                  - img [ref=e2337]
+              - generic [ref=e2343]:
+                - img [ref=e2344]
+                - generic [ref=e2347]: +18 бонусів
+              - generic [ref=e2349]:
+                - img [ref=e2350]
+                - generic [ref=e2353]: В наявності
+          - generic [ref=e2355]:
+            - link "Паперова книга «Ялинка для зайчика (+ наліпки)», автор Людмила Кієнко – фото №1" [ref=e2356] [cursor=pointer]:
+              - /url: /ua/jalinka-dlja-zajchika.html
+              - generic [ref=e2357]:
+                - img "Паперова книга «Ялинка для зайчика (+ наліпки)», автор Людмила Кієнко – фото №1" [ref=e2359]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e2361]:
+              - generic [ref=e2363]:
+                - generic [ref=e2364]:
+                  - generic [ref=e2366]:
+                    - img [ref=e2367]
+                    - generic [ref=e2370]: "0"
+                  - generic [ref=e2372]:
+                    - img [ref=e2373]
+                    - generic [ref=e2376]: "0"
+                - button "Топ" [ref=e2377] [cursor=pointer]:
+                  - img [ref=e2378]
+                  - text: Топ
+              - generic [ref=e2382]:
+                - link "Ялинка для зайчика (+ наліпки)" [ref=e2383] [cursor=pointer]:
+                  - /url: /ua/jalinka-dlja-zajchika.html
+                - generic [ref=e2384]: Людмила Кієнко
+              - generic [ref=e2385]:
+                - generic [ref=e2388]: 35 грн
+                - button [ref=e2389] [cursor=pointer]:
+                  - img [ref=e2390]
+              - generic [ref=e2396]:
+                - img [ref=e2397]
+                - generic [ref=e2400]: +18 бонусів
+              - generic [ref=e2402]:
+                - img [ref=e2403]
+                - generic [ref=e2406]: В наявності
+          - generic [ref=e2408]:
+            - link "Паперова книга «Чарівна зима. Оленятко. Наліпки», авторів Оксана Алліна, Оксана Алліна – фото №1" [ref=e2409] [cursor=pointer]:
+              - /url: /ua/charivna-zima-olenjatko-nalipki.html
+              - generic [ref=e2410]:
+                - img "Паперова книга «Чарівна зима. Оленятко. Наліпки», авторів Оксана Алліна, Оксана Алліна – фото №1" [ref=e2412]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e2414]:
+              - generic [ref=e2416]:
+                - generic [ref=e2417]:
+                  - generic [ref=e2419]:
+                    - img [ref=e2420]
+                    - generic [ref=e2423]: "0"
+                  - generic [ref=e2425]:
+                    - img [ref=e2426]
+                    - generic [ref=e2429]: "0"
+                - button "Топ" [ref=e2430] [cursor=pointer]:
+                  - img [ref=e2431]
+                  - text: Топ
+              - generic [ref=e2435]:
+                - link "Чарівна зима. Оленятко. Наліпки" [ref=e2436] [cursor=pointer]:
+                  - /url: /ua/charivna-zima-olenjatko-nalipki.html
+                - generic [ref=e2437]: Оксана Алліна
+              - generic [ref=e2438]:
+                - generic [ref=e2441]: 35 грн
+                - button [ref=e2442] [cursor=pointer]:
+                  - img [ref=e2443]
+              - generic [ref=e2449]:
+                - img [ref=e2450]
+                - generic [ref=e2453]: +18 бонусів
+              - generic [ref=e2455]:
+                - img [ref=e2456]
+                - generic [ref=e2459]: В наявності
+          - generic [ref=e2461]:
+            - link "Паперова книга «Фізика в таблицях і схемах. 7-11 класи» – фото №1" [ref=e2462] [cursor=pointer]:
+              - /url: /ua/knizhka-najkraschij-dovidnik-fizika-v-tablicjah-i-shemah-7-11-klasi.html
+              - generic [ref=e2463]:
+                - img "Паперова книга «Фізика в таблицях і схемах. 7-11 класи» – фото №1" [ref=e2465]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e2467]:
+              - generic [ref=e2469]:
+                - generic [ref=e2470]:
+                  - generic [ref=e2472]:
+                    - img [ref=e2473]
+                    - generic [ref=e2476]: "0"
+                  - generic [ref=e2478]:
+                    - img [ref=e2479]
+                    - generic [ref=e2482]: "0"
+                - button "Топ" [ref=e2483] [cursor=pointer]:
+                  - img [ref=e2484]
+                  - text: Топ
+              - link "Фізика в таблицях і схемах. 7-11 класи" [ref=e2489] [cursor=pointer]:
+                - /url: /ua/knizhka-najkraschij-dovidnik-fizika-v-tablicjah-i-shemah-7-11-klasi.html
+              - generic [ref=e2491]:
+                - generic [ref=e2494]: 44 грн
+                - button [ref=e2495] [cursor=pointer]:
+                  - img [ref=e2496]
+              - generic [ref=e2502]:
+                - img [ref=e2503]
+                - generic [ref=e2506]: +22 бонуси
+              - generic [ref=e2508]:
+                - img [ref=e2509]
+                - generic [ref=e2512]: В наявності
+          - generic [ref=e2514]:
+            - link "Паперова книга «Тренажер з англійської мови. Reading. 2 клас», автор Юлія Чіміріс – фото №1" [ref=e2515] [cursor=pointer]:
+              - /url: /ua/kniga-trenazher-z-anglijs-koi-movi-reading-2-klas.html
+              - generic [ref=e2516]:
+                - img "Паперова книга «Тренажер з англійської мови. Reading. 2 клас», автор Юлія Чіміріс – фото №1" [ref=e2518]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e2520]:
+              - generic [ref=e2522]:
+                - generic [ref=e2523]:
+                  - generic [ref=e2525]:
+                    - img [ref=e2526]
+                    - generic [ref=e2529]: "5"
+                  - generic [ref=e2531]:
+                    - img [ref=e2532]
+                    - generic [ref=e2535]: "1"
+                - button "Топ" [ref=e2536] [cursor=pointer]:
+                  - img [ref=e2537]
+                  - text: Топ
+              - generic [ref=e2541]:
+                - link "Тренажер з англійської мови. Reading. 2 клас" [ref=e2542] [cursor=pointer]:
+                  - /url: /ua/kniga-trenazher-z-anglijs-koi-movi-reading-2-klas.html
+                - generic [ref=e2543]: Юлія Чіміріс
+              - generic [ref=e2544]:
+                - generic [ref=e2547]: 48 грн
+                - button [ref=e2548] [cursor=pointer]:
+                  - img [ref=e2549]
+              - generic [ref=e2555]:
+                - img [ref=e2556]
+                - generic [ref=e2559]: +24 бонуси
+              - generic [ref=e2561]:
+                - img [ref=e2562]
+                - generic [ref=e2565]: В наявності
+          - generic [ref=e2567]:
+            - link "Паперова книга «Christmas sticker book. Адвент-календар» – фото №1" [ref=e2568] [cursor=pointer]:
+              - /url: /ua/christmas-sticker-book-advent-kalendar.html
+              - generic [ref=e2569]:
+                - img "Паперова книга «Christmas sticker book. Адвент-календар» – фото №1" [ref=e2571]
+                - generic:
+                  - generic:
+                    - img
+            - generic [ref=e2573]:
+              - generic [ref=e2575]:
+                - generic [ref=e2576]:
+                  - generic [ref=e2578]:
+                    - img [ref=e2579]
+                    - generic [ref=e2582]: "0"
+                  - generic [ref=e2584]:
+                    - img [ref=e2585]
+                    - generic [ref=e2588]: "0"
+                - button "Топ" [ref=e2589] [cursor=pointer]:
+                  - img [ref=e2590]
+                  - text: Топ
+              - link "Christmas sticker book. Адвент-календар" [ref=e2595] [cursor=pointer]:
+                - /url: /ua/christmas-sticker-book-advent-kalendar.html
+              - generic [ref=e2597]:
+                - generic [ref=e2598]:
+                  - generic [ref=e2599]:
+                    - generic [ref=e2600]: 59 грн
+                    - generic [ref=e2601]: "-16%"
+                  - generic [ref=e2603]: 50 грн
+                - button [ref=e2604] [cursor=pointer]:
+                  - img [ref=e2605]
+              - generic [ref=e2611]:
+                - img [ref=e2612]
+                - generic [ref=e2615]: +25 бонусів
+              - generic [ref=e2617]:
+                - img [ref=e2618]
+                - generic [ref=e2621]: В наявності
+          - generic [ref=e2623]:
+            - link "Паперова книга «Подарунок для білченяти (+ наліпки)», автор Оксана Алліна – фото №1" [ref=e2624] [cursor=pointer]:
+              - /url: /ua/podarunok-dlja-bilchenjati.html
+              - generic [ref=e2625]:
+                - img "Паперова книга «Подарунок для білченяти (+ наліпки)», автор Оксана Алліна – фото №1" [ref=e2627]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e2629]:
+              - generic [ref=e2631]:
+                - generic [ref=e2632]:
+                  - generic [ref=e2634]:
+                    - img [ref=e2635]
+                    - generic [ref=e2638]: "0"
+                  - generic [ref=e2640]:
+                    - img [ref=e2641]
+                    - generic [ref=e2644]: "0"
+                - button "Топ" [ref=e2645] [cursor=pointer]:
+                  - img [ref=e2646]
+                  - text: Топ
+              - generic [ref=e2650]:
+                - link "Подарунок для білченяти (+ наліпки)" [ref=e2651] [cursor=pointer]:
+                  - /url: /ua/podarunok-dlja-bilchenjati.html
+                - generic [ref=e2652]: Оксана Алліна
+              - generic [ref=e2653]:
+                - generic [ref=e2656]: 35 грн
+                - button [ref=e2657] [cursor=pointer]:
+                  - img [ref=e2658]
+              - generic [ref=e2664]:
+                - img [ref=e2665]
+                - generic [ref=e2668]: +18 бонусів
+              - generic [ref=e2670]:
+                - img [ref=e2671]
+                - generic [ref=e2674]: В наявності
+          - generic [ref=e2676]:
+            - link "Паперова книга «Ялинка для оленяти (+ наліпки)», автор Людмила Кієнко – фото №1" [ref=e2677] [cursor=pointer]:
+              - /url: /ua/jalinka-dlja-olenjati-nalipki.html
+              - generic [ref=e2678]:
+                - img "Паперова книга «Ялинка для оленяти (+ наліпки)», автор Людмила Кієнко – фото №1" [ref=e2680]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e2682]:
+              - generic [ref=e2684]:
+                - generic [ref=e2685]:
+                  - generic [ref=e2687]:
+                    - img [ref=e2688]
+                    - generic [ref=e2691]: "0"
+                  - generic [ref=e2693]:
+                    - img [ref=e2694]
+                    - generic [ref=e2697]: "0"
+                - button "Топ" [ref=e2698] [cursor=pointer]:
+                  - img [ref=e2699]
+                  - text: Топ
+              - generic [ref=e2703]:
+                - link "Ялинка для оленяти (+ наліпки)" [ref=e2704] [cursor=pointer]:
+                  - /url: /ua/jalinka-dlja-olenjati-nalipki.html
+                - generic [ref=e2705]: Людмила Кієнко
+              - generic [ref=e2706]:
+                - generic [ref=e2709]: 35 грн
+                - button [ref=e2710] [cursor=pointer]:
+                  - img [ref=e2711]
+              - generic [ref=e2717]:
+                - img [ref=e2718]
+                - generic [ref=e2721]: +18 бонусів
+              - generic [ref=e2723]:
+                - img [ref=e2724]
+                - generic [ref=e2727]: В наявності
+          - generic [ref=e2729]:
+            - link "Паперова книга «Колядочка», автор Володимир Верховень – фото №1" [ref=e2730] [cursor=pointer]:
+              - /url: /ua/koljadochka.html
+              - generic [ref=e2731]:
+                - img "Паперова книга «Колядочка», автор Володимир Верховень – фото №1" [ref=e2733]
+                - generic:
+                  - generic:
+                    - img
+            - generic [ref=e2735]:
+              - generic [ref=e2737]:
+                - generic [ref=e2738]:
+                  - generic [ref=e2740]:
+                    - img [ref=e2741]
+                    - generic [ref=e2744]: "0"
+                  - generic [ref=e2746]:
+                    - img [ref=e2747]
+                    - generic [ref=e2750]: "0"
+                - button "Топ" [ref=e2751] [cursor=pointer]:
+                  - img [ref=e2752]
+                  - text: Топ
+              - generic [ref=e2756]:
+                - link "Колядочка" [ref=e2757] [cursor=pointer]:
+                  - /url: /ua/koljadochka.html
+                - generic [ref=e2758]: Володимир Верховень
+              - generic [ref=e2759]:
+                - generic [ref=e2760]:
+                  - generic [ref=e2761]:
+                    - generic [ref=e2762]: 28 грн
+                    - generic [ref=e2763]: "-11%"
+                  - generic [ref=e2765]: 25 грн
+                - button [ref=e2766] [cursor=pointer]:
+                  - img [ref=e2767]
+              - generic [ref=e2773]:
+                - img [ref=e2774]
+                - generic [ref=e2777]: +13 бонусів
+              - generic [ref=e2779]:
+                - img [ref=e2780]
+                - generic [ref=e2783]: В наявності
+          - generic [ref=e2785]:
+            - link "Паперова книга «Листівка З Новим роком!» – фото №1" [ref=e2786] [cursor=pointer]:
+              - /url: /ua/kenguru-vital-ni-listivki-z-novim-rokom-ukr-30.html
+              - generic [ref=e2787]:
+                - img "Паперова книга «Листівка З Новим роком!» – фото №1" [ref=e2789]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e2791]:
+              - generic [ref=e2793]:
+                - generic [ref=e2794]:
+                  - generic [ref=e2796]:
+                    - img [ref=e2797]
+                    - generic [ref=e2800]: "0"
+                  - generic [ref=e2802]:
+                    - img [ref=e2803]
+                    - generic [ref=e2806]: "0"
+                - button "Топ" [ref=e2807] [cursor=pointer]:
+                  - img [ref=e2808]
+                  - text: Топ
+              - link "Листівка З Новим роком!" [ref=e2813] [cursor=pointer]:
+                - /url: /ua/kenguru-vital-ni-listivki-z-novim-rokom-ukr-30.html
+              - generic [ref=e2815]:
+                - generic [ref=e2818]: 30 грн
+                - button [ref=e2819] [cursor=pointer]:
+                  - img [ref=e2820]
+              - generic [ref=e2826]:
+                - img [ref=e2827]
+                - generic [ref=e2830]: +15 бонусів
+              - generic [ref=e2832]:
+                - img [ref=e2833]
+                - generic [ref=e2836]: Доставка 13 днів
+          - generic [ref=e2838]:
+            - link "Паперова книга «Business English Success. Посібник із ділової англійської мови», авторів Олена Жихарьова, Вікторія Ставцева – фото №1" [ref=e2839] [cursor=pointer]:
+              - /url: /ua/business-english-success-posibnik-iz-dilovoi-anglijs-koi-movi.html
+              - generic [ref=e2840]:
+                - img "Паперова книга «Business English Success. Посібник із ділової англійської мови», авторів Олена Жихарьова, Вікторія Ставцева – фото №1" [ref=e2842]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e2844]:
+              - generic [ref=e2846]:
+                - generic [ref=e2847]:
+                  - generic [ref=e2849]:
+                    - img [ref=e2850]
+                    - generic [ref=e2853]: "0"
+                  - generic [ref=e2855]:
+                    - img [ref=e2856]
+                    - generic [ref=e2859]: "0"
+                - button "Топ" [ref=e2860] [cursor=pointer]:
+                  - img [ref=e2861]
+                  - text: Топ
+              - generic [ref=e2865]:
+                - link "Business English Success. Посібник із ділової англійської мови" [ref=e2866] [cursor=pointer]:
+                  - /url: /ua/business-english-success-posibnik-iz-dilovoi-anglijs-koi-movi.html
+                - generic [ref=e2867]: Олена Жихарьова
+              - generic [ref=e2868]:
+                - generic [ref=e2869]:
+                  - generic [ref=e2870]:
+                    - generic [ref=e2871]: 53 грн
+                    - generic [ref=e2872]: "-17%"
+                  - generic [ref=e2874]: 44 грн
+                - button [ref=e2875] [cursor=pointer]:
+                  - img [ref=e2876]
+              - generic [ref=e2882]:
+                - img [ref=e2883]
+                - generic [ref=e2886]: +22 бонуси
+              - generic [ref=e2888]:
+                - img [ref=e2889]
+                - generic [ref=e2892]: В наявності
+          - generic [ref=e2894]:
+            - link "Паперова книга «Англійська мова в таблицях і схемах. 5-11 класи», автор Галина Погожих – фото №1" [ref=e2895] [cursor=pointer]:
+              - /url: /ua/anglijs-ka-mova-v-tablicjah-i-shemah-5-11-klasi.html
+              - generic [ref=e2896]:
+                - img "Паперова книга «Англійська мова в таблицях і схемах. 5-11 класи», автор Галина Погожих – фото №1" [ref=e2898]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e2900]:
+              - generic [ref=e2902]:
+                - generic [ref=e2903]:
+                  - generic [ref=e2905]:
+                    - img [ref=e2906]
+                    - generic [ref=e2909]: "0"
+                  - generic [ref=e2911]:
+                    - img [ref=e2912]
+                    - generic [ref=e2915]: "0"
+                - button "Топ" [ref=e2916] [cursor=pointer]:
+                  - img [ref=e2917]
+                  - text: Топ
+              - generic [ref=e2921]:
+                - link "Англійська мова в таблицях і схемах. 5-11 класи" [ref=e2922] [cursor=pointer]:
+                  - /url: /ua/anglijs-ka-mova-v-tablicjah-i-shemah-5-11-klasi.html
+                - generic [ref=e2923]: Галина Погожих
+              - generic [ref=e2924]:
+                - generic [ref=e2927]: 44 грн
+                - button [ref=e2928] [cursor=pointer]:
+                  - img [ref=e2929]
+              - generic [ref=e2935]:
+                - img [ref=e2936]
+                - generic [ref=e2939]: +22 бонуси
+              - generic [ref=e2941]:
+                - img [ref=e2942]
+                - generic [ref=e2945]: В наявності
+          - generic [ref=e2947]:
+            - link "Паперова книга «Подарунок для ведмедика (+ наліпки)», автор Оксана Алліна – фото №1" [ref=e2948] [cursor=pointer]:
+              - /url: /ua/podarunok-dlja-vedmedika.html
+              - generic [ref=e2949]:
+                - img "Паперова книга «Подарунок для ведмедика (+ наліпки)», автор Оксана Алліна – фото №1" [ref=e2951]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e2953]:
+              - generic [ref=e2956]:
+                - generic [ref=e2958]:
+                  - img [ref=e2959]
+                  - generic [ref=e2962]: "0"
+                - generic [ref=e2964]:
+                  - img [ref=e2965]
+                  - generic [ref=e2968]: "0"
+              - generic [ref=e2969]:
+                - link "Подарунок для ведмедика (+ наліпки)" [ref=e2970] [cursor=pointer]:
+                  - /url: /ua/podarunok-dlja-vedmedika.html
+                - generic [ref=e2971]: Оксана Алліна
+              - generic [ref=e2972]:
+                - generic [ref=e2975]: 35 грн
+                - button [ref=e2976] [cursor=pointer]:
+                  - img [ref=e2977]
+              - generic [ref=e2983]:
+                - img [ref=e2984]
+                - generic [ref=e2987]: +18 бонусів
+              - generic [ref=e2989]:
+                - img [ref=e2990]
+                - generic [ref=e2993]: В наявності
+          - generic [ref=e2995]:
+            - link "Паперова книга «Телефон», автор Іван Багряний – фото №1" [ref=e2996] [cursor=pointer]:
+              - /url: /ua/telefon-3003940.html
+              - generic [ref=e2997]:
+                - img "Паперова книга «Телефон», автор Іван Багряний – фото №1" [ref=e2999]
+                - generic:
+                  - generic:
+                    - img
+            - generic [ref=e3001]:
+              - generic [ref=e3004]:
+                - generic [ref=e3006]:
+                  - img [ref=e3007]
+                  - generic [ref=e3010]: "0"
+                - generic [ref=e3012]:
+                  - img [ref=e3013]
+                  - generic [ref=e3016]: "0"
+              - generic [ref=e3017]:
+                - link "Телефон" [ref=e3018] [cursor=pointer]:
+                  - /url: /ua/telefon-3003940.html
+                - generic [ref=e3019]: Іван Багряний
+              - generic [ref=e3020]:
+                - generic [ref=e3021]:
+                  - generic [ref=e3022]:
+                    - generic [ref=e3023]: 50 грн
+                    - generic [ref=e3024]: "-12%"
+                  - generic [ref=e3026]: 44 грн
+                - button [ref=e3027] [cursor=pointer]:
+                  - img [ref=e3028]
+              - generic [ref=e3034]:
+                - img [ref=e3035]
+                - generic [ref=e3038]: +22 бонуси
+              - generic [ref=e3040]:
+                - img [ref=e3041]
+                - generic [ref=e3044]: В наявності
+          - generic [ref=e3046]:
+            - link "Паперова книга «Піксі-книжка. Ясмін і Фабіан. Сюрприз на Різдво» – фото №1" [ref=e3047] [cursor=pointer]:
+              - /url: /ua/piksi-knizhka-jasmin-i-fabian-sjurpriz-na-rizdvo.html
+              - generic [ref=e3048]:
+                - img "Паперова книга «Піксі-книжка. Ясмін і Фабіан. Сюрприз на Різдво» – фото №1" [ref=e3050]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e3052]:
+              - generic [ref=e3055]:
+                - generic [ref=e3057]:
+                  - img [ref=e3058]
+                  - generic [ref=e3061]: "0"
+                - generic [ref=e3063]:
+                  - img [ref=e3064]
+                  - generic [ref=e3067]: "0"
+              - link "Піксі-книжка. Ясмін і Фабіан. Сюрприз на Різдво" [ref=e3069] [cursor=pointer]:
+                - /url: /ua/piksi-knizhka-jasmin-i-fabian-sjurpriz-na-rizdvo.html
+              - generic [ref=e3071]:
+                - generic [ref=e3074]: 49 грн
+                - button [ref=e3075] [cursor=pointer]:
+                  - img [ref=e3076]
+              - generic [ref=e3082]:
+                - img [ref=e3083]
+                - generic [ref=e3086]: +25 бонусів
+              - generic [ref=e3088]:
+                - img [ref=e3089]
+                - generic [ref=e3092]: В наявності
+          - generic [ref=e3094]:
+            - link "Паперова книга «Екзамен на великоднього зайця» – фото №1" [ref=e3095] [cursor=pointer]:
+              - /url: /ua/ekzamen-na-velikodn-ogo-zajcja.html
+              - generic [ref=e3096]:
+                - img "Паперова книга «Екзамен на великоднього зайця» – фото №1" [ref=e3098]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e3100]:
+              - generic [ref=e3103]:
+                - generic [ref=e3105]:
+                  - img [ref=e3106]
+                  - generic [ref=e3109]: "0"
+                - generic [ref=e3111]:
+                  - img [ref=e3112]
+                  - generic [ref=e3115]: "0"
+              - link "Екзамен на великоднього зайця" [ref=e3117] [cursor=pointer]:
+                - /url: /ua/ekzamen-na-velikodn-ogo-zajcja.html
+              - generic [ref=e3119]:
+                - generic [ref=e3122]: 49 грн
+                - button [ref=e3123] [cursor=pointer]:
+                  - img [ref=e3124]
+              - generic [ref=e3130]:
+                - img [ref=e3131]
+                - generic [ref=e3134]: +25 бонусів
+              - generic [ref=e3136]:
+                - img [ref=e3137]
+                - generic [ref=e3140]: В наявності
+          - generic [ref=e3142]:
+            - link "Паперова книга «Піксі рятує Великдень» – фото №1" [ref=e3143] [cursor=pointer]:
+              - /url: /ua/piksi-rjatue-velikden.html
+              - generic [ref=e3144]:
+                - img "Паперова книга «Піксі рятує Великдень» – фото №1" [ref=e3146]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e3148]:
+              - generic [ref=e3151]:
+                - generic [ref=e3153]:
+                  - img [ref=e3154]
+                  - generic [ref=e3157]: "0"
+                - generic [ref=e3159]:
+                  - img [ref=e3160]
+                  - generic [ref=e3163]: "0"
+              - link "Піксі рятує Великдень" [ref=e3165] [cursor=pointer]:
+                - /url: /ua/piksi-rjatue-velikden.html
+              - generic [ref=e3167]:
+                - generic [ref=e3170]: 49 грн
+                - button [ref=e3171] [cursor=pointer]:
+                  - img [ref=e3172]
+              - generic [ref=e3178]:
+                - img [ref=e3179]
+                - generic [ref=e3182]: +25 бонусів
+              - generic [ref=e3184]:
+                - img [ref=e3185]
+                - generic [ref=e3188]: В наявності
+          - generic [ref=e3190]:
+            - link "Паперова книга «Набір новорічних прикрас» – фото №1" [ref=e3191] [cursor=pointer]:
+              - /url: /ua/nabir-novorichnih-prikras.html
+              - img "Паперова книга «Набір новорічних прикрас» – фото №1" [ref=e3194]
+            - generic [ref=e3196]:
+              - generic [ref=e3199]:
+                - generic [ref=e3201]:
+                  - img [ref=e3202]
+                  - generic [ref=e3205]: "0"
+                - generic [ref=e3207]:
+                  - img [ref=e3208]
+                  - generic [ref=e3211]: "0"
+              - link "Набір новорічних прикрас" [ref=e3213] [cursor=pointer]:
+                - /url: /ua/nabir-novorichnih-prikras.html
+              - generic [ref=e3215]:
+                - generic [ref=e3218]: 42 грн
+                - button [ref=e3219] [cursor=pointer]:
+                  - img [ref=e3220]
+              - generic [ref=e3226]:
+                - img [ref=e3227]
+                - generic [ref=e3230]: +21 бонус
+              - generic [ref=e3232]:
+                - img [ref=e3233]
+                - generic [ref=e3236]: В наявності
+          - generic [ref=e3238]:
+            - link "Паперова книга «Свято наближається. Різдвяна розмальовка із завданнями», автор Оксана Дубницька – фото №1" [ref=e3239] [cursor=pointer]:
+              - /url: /ua/svjato-nablizhaet-sja-rizdvjana-rozmal-ovka-iz-zavdannjami.html
+              - generic [ref=e3240]:
+                - img "Паперова книга «Свято наближається. Різдвяна розмальовка із завданнями», автор Оксана Дубницька – фото №1" [ref=e3242]
+                - generic:
+                  - generic:
+                    - img
+            - generic [ref=e3244]:
+              - generic [ref=e3247]:
+                - generic [ref=e3249]:
+                  - img [ref=e3250]
+                  - generic [ref=e3253]: "0"
+                - generic [ref=e3255]:
+                  - img [ref=e3256]
+                  - generic [ref=e3259]: "0"
+              - generic [ref=e3260]:
+                - link "Свято наближається. Різдвяна розмальовка із завданнями" [ref=e3261] [cursor=pointer]:
+                  - /url: /ua/svjato-nablizhaet-sja-rizdvjana-rozmal-ovka-iz-zavdannjami.html
+                - generic [ref=e3262]: Оксана Дубницька
+              - generic [ref=e3263]:
+                - generic [ref=e3264]:
+                  - generic [ref=e3265]:
+                    - generic [ref=e3266]: 56 грн
+                    - generic [ref=e3267]: "-20%"
+                  - generic [ref=e3269]: 45 грн
+                - button [ref=e3270] [cursor=pointer]:
+                  - img [ref=e3271]
+              - generic [ref=e3277]:
+                - img [ref=e3278]
+                - generic [ref=e3281]: +23 бонуси
+              - generic [ref=e3283]:
+                - img [ref=e3284]
+                - generic [ref=e3287]: В наявності
+          - generic [ref=e3289]:
+            - link "Паперова книга «Філіппіна. Сила тендітного життя», автор Софі Шевіяр-Лютц – фото №1" [ref=e3290] [cursor=pointer]:
+              - /url: /ua/filippina-sila-tenditnogo-zhittja.html
+              - generic [ref=e3291]:
+                - img "Паперова книга «Філіппіна. Сила тендітного життя», автор Софі Шевіяр-Лютц – фото №1" [ref=e3293]
+                - generic:
+                  - generic:
+                    - img
+            - generic [ref=e3295]:
+              - generic [ref=e3298]:
+                - generic [ref=e3300]:
+                  - img [ref=e3301]
+                  - generic [ref=e3304]: "0"
+                - generic [ref=e3306]:
+                  - img [ref=e3307]
+                  - generic [ref=e3310]: "0"
+              - generic [ref=e3311]:
+                - link "Філіппіна. Сила тендітного життя" [ref=e3312] [cursor=pointer]:
+                  - /url: /ua/filippina-sila-tenditnogo-zhittja.html
+                - generic [ref=e3313]: Софі Шевіяр-Лютц
+              - generic [ref=e3314]:
+                - generic [ref=e3315]:
+                  - generic [ref=e3316]:
+                    - generic [ref=e3317]: 50 грн
+                    - generic [ref=e3318]: "-10%"
+                  - generic [ref=e3320]: 45 грн
+                - button [ref=e3321] [cursor=pointer]:
+                  - img [ref=e3322]
+              - generic [ref=e3328]:
+                - img [ref=e3329]
+                - generic [ref=e3332]: +23 бонуси
+              - generic [ref=e3334]:
+                - img [ref=e3335]
+                - generic [ref=e3338]: В наявності
+          - generic [ref=e3340]:
+            - link "Паперова книга «Постукала синичка в шибку», автор Володимир Верховень – фото №1" [ref=e3341] [cursor=pointer]:
+              - /url: /ua/postukala-sinichka-v-shibku.html
+              - generic [ref=e3342]:
+                - img "Паперова книга «Постукала синичка в шибку», автор Володимир Верховень – фото №1" [ref=e3344]
+                - generic:
+                  - generic:
+                    - img
+            - generic [ref=e3346]:
+              - generic [ref=e3349]:
+                - generic [ref=e3351]:
+                  - img [ref=e3352]
+                  - generic [ref=e3355]: "0"
+                - generic [ref=e3357]:
+                  - img [ref=e3358]
+                  - generic [ref=e3361]: "0"
+              - generic [ref=e3362]:
+                - link "Постукала синичка в шибку" [ref=e3363] [cursor=pointer]:
+                  - /url: /ua/postukala-sinichka-v-shibku.html
+                - generic [ref=e3364]: Володимир Верховень
+              - generic [ref=e3365]:
+                - generic [ref=e3366]:
+                  - generic [ref=e3367]:
+                    - generic [ref=e3368]: 28 грн
+                    - generic [ref=e3369]: "-15%"
+                  - generic [ref=e3371]: 24 грн
+                - button [ref=e3372] [cursor=pointer]:
+                  - img [ref=e3373]
+              - generic [ref=e3379]:
+                - img [ref=e3380]
+                - generic [ref=e3383]: +12 бонусів
+              - generic [ref=e3385]:
+                - img [ref=e3386]
+                - generic [ref=e3389]: В наявності
+          - generic [ref=e3391]:
+            - link "Паперова книга «Символ року. Дракон» – фото №1" [ref=e3392] [cursor=pointer]:
+              - /url: /ua/6531-1-simol-roku-drakon-u-50-10104263u-plakati-v-kozhnij-kabinet-42.html
+              - generic [ref=e3393]:
+                - img "Паперова книга «Символ року. Дракон» – фото №1" [ref=e3395]
+                - generic:
+                  - generic:
+                    - img
+            - generic [ref=e3397]:
+              - generic [ref=e3400]:
+                - generic [ref=e3402]:
+                  - img [ref=e3403]
+                  - generic [ref=e3406]: "0"
+                - generic [ref=e3408]:
+                  - img [ref=e3409]
+                  - generic [ref=e3412]: "0"
+              - link "Символ року. Дракон" [ref=e3414] [cursor=pointer]:
+                - /url: /ua/6531-1-simol-roku-drakon-u-50-10104263u-plakati-v-kozhnij-kabinet-42.html
+              - generic [ref=e3416]:
+                - generic [ref=e3419]: 42 грн
+                - button [ref=e3420] [cursor=pointer]:
+                  - img [ref=e3421]
+              - generic [ref=e3427]:
+                - img [ref=e3428]
+                - generic [ref=e3431]: +21 бонус
+              - generic [ref=e3433]:
+                - img [ref=e3434]
+                - generic [ref=e3437]: В наявності
+          - generic [ref=e3439]:
+            - link "Паперова книга «Новорічні пригоди. Наліпки-одягалки. У зоопарку», автор Олена Чхайло – фото №1" [ref=e3440] [cursor=pointer]:
+              - /url: /ua/novorichni-prigodi-nalipki-odjagalki-u-zooparku.html
+              - generic [ref=e3441]:
+                - img "Паперова книга «Новорічні пригоди. Наліпки-одягалки. У зоопарку», автор Олена Чхайло – фото №1" [ref=e3443]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e3445]:
+              - generic [ref=e3448]:
+                - generic [ref=e3450]:
+                  - img [ref=e3451]
+                  - generic [ref=e3454]: "0"
+                - generic [ref=e3456]:
+                  - img [ref=e3457]
+                  - generic [ref=e3460]: "0"
+              - generic [ref=e3461]:
+                - link "Новорічні пригоди. Наліпки-одягалки. У зоопарку" [ref=e3462] [cursor=pointer]:
+                  - /url: /ua/novorichni-prigodi-nalipki-odjagalki-u-zooparku.html
+                - generic [ref=e3463]: Олена Чхайло
+              - generic [ref=e3464]:
+                - generic [ref=e3467]: 35 грн
+                - button [ref=e3468] [cursor=pointer]:
+                  - img [ref=e3469]
+              - generic [ref=e3475]:
+                - img [ref=e3476]
+                - generic [ref=e3479]: +18 бонусів
+              - generic [ref=e3481]:
+                - img [ref=e3482]
+                - generic [ref=e3485]: В наявності
+          - generic [ref=e3487]:
+            - link "Паперова книга «Новорічні пригоди. Наліпки-одягалки. У космосі», автор Олена Чхайло – фото №1" [ref=e3488] [cursor=pointer]:
+              - /url: /ua/novorichni-prigodi-nalipki-odjagalki-u-kosmosi.html
+              - generic [ref=e3489]:
+                - img "Паперова книга «Новорічні пригоди. Наліпки-одягалки. У космосі», автор Олена Чхайло – фото №1" [ref=e3491]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e3493]:
+              - generic [ref=e3496]:
+                - generic [ref=e3498]:
+                  - img [ref=e3499]
+                  - generic [ref=e3502]: "0"
+                - generic [ref=e3504]:
+                  - img [ref=e3505]
+                  - generic [ref=e3508]: "0"
+              - generic [ref=e3509]:
+                - link "Новорічні пригоди. Наліпки-одягалки. У космосі" [ref=e3510] [cursor=pointer]:
+                  - /url: /ua/novorichni-prigodi-nalipki-odjagalki-u-kosmosi.html
+                - generic [ref=e3511]: Олена Чхайло
+              - generic [ref=e3512]:
+                - generic [ref=e3515]: 35 грн
+                - button [ref=e3516] [cursor=pointer]:
+                  - img [ref=e3517]
+              - generic [ref=e3523]:
+                - img [ref=e3524]
+                - generic [ref=e3527]: +18 бонусів
+              - generic [ref=e3529]:
+                - img [ref=e3530]
+                - generic [ref=e3533]: В наявності
+          - generic [ref=e3535]:
+            - link "Паперова книга «Перший англійський словничок. Єдиноріг» – фото №1" [ref=e3536] [cursor=pointer]:
+              - /url: /ua/pershij-anglijs-kij-slovnichok-edinorig.html
+              - generic [ref=e3537]:
+                - img "Паперова книга «Перший англійський словничок. Єдиноріг» – фото №1" [ref=e3539]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e3541]:
+              - generic [ref=e3544]:
+                - generic [ref=e3546]:
+                  - img [ref=e3547]
+                  - generic [ref=e3550]: "0"
+                - generic [ref=e3552]:
+                  - img [ref=e3553]
+                  - generic [ref=e3556]: "0"
+              - link "Перший англійський словничок. Єдиноріг" [ref=e3558] [cursor=pointer]:
+                - /url: /ua/pershij-anglijs-kij-slovnichok-edinorig.html
+              - generic [ref=e3560]:
+                - generic [ref=e3561]:
+                  - generic [ref=e3562]:
+                    - generic [ref=e3563]: 47 грн
+                    - generic [ref=e3564]: "-7%"
+                  - generic [ref=e3566]: 44 грн
+                - button [ref=e3567] [cursor=pointer]:
+                  - img [ref=e3568]
+              - generic [ref=e3574]:
+                - img [ref=e3575]
+                - generic [ref=e3578]: +22 бонуси
+              - generic [ref=e3580]:
+                - img [ref=e3581]
+                - generic [ref=e3584]: В наявності
+          - generic [ref=e3586]:
+            - link "Паперова книга «Перший англійський словничок. Монстр» – фото №1" [ref=e3587] [cursor=pointer]:
+              - /url: /ua/pershij-anglijs-kij-slovnichok-monstr.html
+              - generic [ref=e3588]:
+                - img "Паперова книга «Перший англійський словничок. Монстр» – фото №1" [ref=e3590]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e3592]:
+              - generic [ref=e3595]:
+                - generic [ref=e3597]:
+                  - img [ref=e3598]
+                  - generic [ref=e3601]: "0"
+                - generic [ref=e3603]:
+                  - img [ref=e3604]
+                  - generic [ref=e3607]: "0"
+              - link "Перший англійський словничок. Монстр" [ref=e3609] [cursor=pointer]:
+                - /url: /ua/pershij-anglijs-kij-slovnichok-monstr.html
+              - generic [ref=e3611]:
+                - generic [ref=e3614]: 47 грн
+                - button [ref=e3615] [cursor=pointer]:
+                  - img [ref=e3616]
+              - generic [ref=e3622]:
+                - img [ref=e3623]
+                - generic [ref=e3626]: +24 бонуси
+              - generic [ref=e3628]:
+                - img [ref=e3629]
+                - generic [ref=e3632]: В наявності
+          - generic [ref=e3634]:
+            - link "Паперова книга «Лист святому Миколаю. Червоний» – фото №1" [ref=e3635] [cursor=pointer]:
+              - /url: /ua/list-svjatomu-mikolaju-chervonij.html
+              - generic [ref=e3636]:
+                - img "Паперова книга «Лист святому Миколаю. Червоний» – фото №1" [ref=e3638]
+                - generic:
+                  - generic:
+                    - img
+            - generic [ref=e3640]:
+              - generic [ref=e3643]:
+                - generic [ref=e3645]:
+                  - img [ref=e3646]
+                  - generic [ref=e3649]: "0"
+                - generic [ref=e3651]:
+                  - img [ref=e3652]
+                  - generic [ref=e3655]: "0"
+              - link "Лист святому Миколаю. Червоний" [ref=e3657] [cursor=pointer]:
+                - /url: /ua/list-svjatomu-mikolaju-chervonij.html
+              - generic [ref=e3659]:
+                - generic [ref=e3662]: 27 грн
+                - button [ref=e3663] [cursor=pointer]:
+                  - img [ref=e3664]
+              - generic [ref=e3670]:
+                - img [ref=e3671]
+                - generic [ref=e3674]: +14 бонусів
+              - generic [ref=e3676]:
+                - img [ref=e3677]
+                - generic [ref=e3680]: В наявності
+          - generic [ref=e3682]:
+            - link "Паперова книга «Чарівні наліпки. Кришталева куля. Весна», автор Анастасія Фісіна – фото №1" [ref=e3683] [cursor=pointer]:
+              - /url: /ua/charivni-nalipki-krishtaleva-kulja-vesna.html
+              - generic [ref=e3684]:
+                - img "Паперова книга «Чарівні наліпки. Кришталева куля. Весна», автор Анастасія Фісіна – фото №1" [ref=e3686]
+                - generic:
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+                  - generic:
+                    - img
+            - generic [ref=e3688]:
+              - generic [ref=e3691]:
+                - generic [ref=e3693]:
+                  - img [ref=e3694]
+                  - generic [ref=e3697]: "0"
+                - generic [ref=e3699]:
+                  - img [ref=e3700]
+                  - generic [ref=e3703]: "0"
+              - generic [ref=e3704]:
+                - link "Чарівні наліпки. Кришталева куля. Весна" [ref=e3705] [cursor=pointer]:
+                  - /url: /ua/charivni-nalipki-krishtaleva-kulja-vesna.html
+                - generic [ref=e3706]: Анастасія Фісіна
+              - generic [ref=e3707]:
+                - generic [ref=e3710]: 39 грн
+                - button [ref=e3711] [cursor=pointer]:
+                  - img [ref=e3712]
+              - generic [ref=e3718]:
+                - img [ref=e3719]
+                - generic [ref=e3722]: +20 бонусів
+              - generic [ref=e3724]:
+                - img [ref=e3725]
+                - generic [ref=e3728]: В наявності
+        - generic [ref=e3729]:
+          - button "Показати більше" [ref=e3730] [cursor=pointer]:
+            - text: Показати більше
+            - img [ref=e3731]
+          - generic [ref=e3734]:
+            - generic:
+              - img
+              - generic: Назад
+            - generic [ref=e3735]:
+              - link "1" [ref=e3737] [cursor=pointer]:
+                - /url: /ua/knigi/dobirki-yakaboo.html?book_publication=Bumazhnaja&price=0-50
+              - link "2" [ref=e3739] [cursor=pointer]:
+                - /url: /ua/knigi/dobirki-yakaboo.html?book_publication=Bumazhnaja&price=0-50&p=2
+              - link "3" [ref=e3741] [cursor=pointer]:
+                - /url: /ua/knigi/dobirki-yakaboo.html?book_publication=Bumazhnaja&price=0-50&p=3
+            - link "Вперед" [ref=e3742] [cursor=pointer]:
+              - /url: /ua/knigi/dobirki-yakaboo.html?book_publication=Bumazhnaja&price=0-50&p=2
+              - generic [ref=e3743]: Вперед
+              - img [ref=e3744]
+  - contentinfo [ref=e3746]:
+    - generic [ref=e3748]:
+      - generic [ref=e3749]:
+        - generic [ref=e3750]: Міняємо email на книжкотренди
+        - generic [ref=e3751]: Інформація про новинки, книжкові добірки, секретні промокоди
+      - generic [ref=e3753]:
+        - textbox "Введіть email" [ref=e3757]
+        - button "Отримувати цікавинки" [disabled]
+    - generic [ref=e3758]:
+      - generic [ref=e3759]:
+        - link "\"Yakaboo – інтернет-магазин з продажу книг" [ref=e3760] [cursor=pointer]:
+          - /url: /
+          - img "\"Yakaboo – інтернет-магазин з продажу книг" [ref=e3763]
+        - generic [ref=e3764]:
+          - link "0-800-335-425" [ref=e3765] [cursor=pointer]:
+            - /url: tel:0800335425
+          - generic [ref=e3766]: Безкоштовно по Україні
+          - generic [ref=e3767]: Без вихідних, 09:00-20:00
+        - list [ref=e3768]:
+          - listitem [ref=e3769] [cursor=pointer]:
+            - link "Telegram" [ref=e3770]:
+              - /url: https://t.me/Yakaboo_ua_bot
+              - img [ref=e3771]
+              - generic [ref=e3774]: Telegram
+          - listitem [ref=e3775] [cursor=pointer]:
+            - link "Viber" [ref=e3776]:
+              - /url: viber://pa?chatURI=yakaboo_ua
+              - img [ref=e3777]
+              - generic [ref=e3782]: Viber
+          - listitem [ref=e3783] [cursor=pointer]:
+            - img [ref=e3784]
+            - generic [ref=e3787]: Замовити дзвінок
+          - listitem [ref=e3788] [cursor=pointer]:
+            - link "Написати на пошту" [ref=e3789]:
+              - /url: mailto:support@yakaboo.ua
+              - img [ref=e3790]
+              - generic [ref=e3794]: Написати на пошту
+      - generic [ref=e3795]:
+        - generic [ref=e3796]:
+          - link "Мобільний застосунок" [ref=e3797] [cursor=pointer]:
+            - /url: https://promosite.yakaboo.ua/mobilniy-zastosunok-yakaboo
+          - generic [ref=e3798]: Читайте і прослуховуйте книжки у найбільшій бібліотеці електронних та аудіокниг від топових українських і світових авторів
+          - generic [ref=e3799]:
+            - link [ref=e3800] [cursor=pointer]:
+              - /url: https://play.google.com/store/apps/details?id=ua.yakaboo&hl=uk&gl=US
+              - img [ref=e3801]
+            - link [ref=e3812] [cursor=pointer]:
+              - /url: https://apps.apple.com/ua/app/yakaboo/id1558352848#?platform=iphone
+              - img [ref=e3813]
+        - generic [ref=e3819]:
+          - link "Instagram" [ref=e3820] [cursor=pointer]:
+            - /url: https://www.instagram.com/yakabooua/
+            - img [ref=e3821]
+          - link "Youtube" [ref=e3827] [cursor=pointer]:
+            - /url: https://www.youtube.com/channel/UC5w2HgI3yU_t3NtB-hAxVKw
+            - img [ref=e3828]
+          - link "Facebook" [ref=e3832] [cursor=pointer]:
+            - /url: https://www.facebook.com/yakabooua
+            - img [ref=e3833]
+          - link "Telegram" [ref=e3837] [cursor=pointer]:
+            - /url: https://t.me/yakabookua
+            - img [ref=e3838]
+      - generic [ref=e3842]:
+        - generic [ref=e3843]:
+          - generic [ref=e3844]: Yakaboo
+          - list [ref=e3847]:
+            - listitem [ref=e3848]:
+              - link "Про магазин" [ref=e3849] [cursor=pointer]:
+                - /url: /ua/about-us
+            - listitem [ref=e3850]:
+              - link "Програма лояльності" [ref=e3851] [cursor=pointer]:
+                - /url: /ua/bonus
+            - listitem [ref=e3852]:
+              - link "Вакансії" [ref=e3853] [cursor=pointer]:
+                - /url: /ua/vacancies
+            - listitem [ref=e3854]:
+              - link "Контакти" [ref=e3855] [cursor=pointer]:
+                - /url: /ua/contact
+        - generic [ref=e3856]:
+          - generic [ref=e3857]: Інформація
+          - list [ref=e3860]:
+            - listitem [ref=e3861]:
+              - link "Доставка та оплата" [ref=e3862] [cursor=pointer]:
+                - /url: /ua/delivery
+            - listitem [ref=e3863]:
+              - link "Подарункові сертифікати" [ref=e3864] [cursor=pointer]:
+                - /url: /ua/podarochnye-sertifikaty
+            - listitem [ref=e3865]:
+              - link "Повернення товару" [ref=e3866] [cursor=pointer]:
+                - /url: /ua/returns
+            - listitem [ref=e3867]:
+              - link "Блог" [ref=e3868] [cursor=pointer]:
+                - /url: https://blog.yakaboo.ua
+            - listitem [ref=e3869]:
+              - link "Часто шукають" [ref=e3870] [cursor=pointer]:
+                - /url: /ua/chasto-ischut.html
+            - listitem [ref=e3871]:
+              - link "Серія книг" [ref=e3872] [cursor=pointer]:
+                - /url: /ua/book_series/view/all
+            - listitem [ref=e3873]:
+              - link "Автори" [ref=e3874] [cursor=pointer]:
+                - /url: /ua/author/view/all
+    - generic [ref=e3877]: © Yakaboo 2004-2025. Усі права захищено
+  - generic [ref=e3878]:
+    - generic [ref=e3879]:
+      - generic [ref=e3880]: Налаштування конфіденційності
+      - paragraph [ref=e3881]: Ми використовуємо файли cookie та подібні технології, які є необхідними для роботи веб-сайту. Додаткові файли cookie використовуються лише за вашої згоди. Ми використовуємо додаткові файли cookie для аналізу використання веб-сайту та перевірки ефективності маркетингових заходів. Ці аналізи проводяться для забезпечення вам кращого користувацького досвіду на веб-сайті.
+      - button "Читати повністю" [ref=e3882] [cursor=pointer]:
+        - generic [ref=e3883]: Читати повністю
+      - generic [ref=e3884]:
+        - button "Прийняти всі файли cookie" [ref=e3885] [cursor=pointer]
+        - button "Відхилити всі файли cookie" [ref=e3886] [cursor=pointer]
+    - button [ref=e3887] [cursor=pointer]:
+      - img [ref=e3888]
+```
