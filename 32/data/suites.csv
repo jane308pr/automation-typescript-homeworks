@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","9542","Verify that every section contains books","chromium","Fri Dec 12 16:23:15 UTC 2025","passed","Fri Dec 12 16:23:24 UTC 2025","Yakaboo tests","yakaboo.spec.ts","",""
+"","16708","Check that books can be filtered by price","chromium","Fri Dec 12 16:24:08 UTC 2025","failed","Fri Dec 12 16:24:24 UTC 2025","Yakaboo tests","yakaboo.spec.ts","",""
+"","10812","Check that search tips are displayed during a search","chromium","Fri Dec 12 16:23:25 UTC 2025","passed","Fri Dec 12 16:23:36 UTC 2025","Yakaboo tests","yakaboo.spec.ts","",""
+"","13067","Check selecting ""Yakaboo Collections"" for paper books from book menu","chromium","Fri Dec 12 16:23:36 UTC 2025","passed","Fri Dec 12 16:23:49 UTC 2025","Yakaboo tests","yakaboo.spec.ts","",""
