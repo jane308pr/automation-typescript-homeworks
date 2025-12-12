@@ -7,6 +7,11 @@ on:
   pull_request:
     branches: [main, lesson22]
   workflow_dispatch:
+    inputs:
+      targetBranch:
+        description: 'Шлях до проєкту'
+        required: true
+        default: 'lesson21'
 
 permissions:
   contents: write
@@ -138,7 +143,6 @@ jobs:
                 | grep -E '^[0-9]+$' \
                 | sort -rn \
                 > gh-pages/builds.txt
-          cat gh-pages/builds.txt >> "$GITHUB_STEP_SUMMARY"
 
               # Початок HTML
           cat > gh-pages/builds.html << 'HTML_HEAD'
@@ -219,9 +223,6 @@ jobs:
           echo "- 📊 **Allure Report**: Download the \`allure-report\` artifact" >> $GITHUB_STEP_SUMMARY
           echo "- 📄 **Allure Single File**: Download the \`allure-report-single-file\` artifact" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-
-          echo "### ✅ Test Results Summary" >> $GITHUB_STEP_SUMMARY
-          echo "Check the test results summary above for detailed pass/fail statistics" >> $GITHUB_STEP_SUMMARY
    
       - name: Comment commit with reports
         if: always() && github.event_name == 'push' && github.ref == 'refs/heads/lesson22'
@@ -255,4 +256,45 @@ jobs:
               commit_sha: context.sha,
               body: comment
             });
+      
+      - name: Comment PR with reports
+        if: always() && github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const runId = context.runId;
+            const runNumber = context.runNumber;
+
+            // PR number із контексту
+            const prNumber = context.issue?.number ?? context.payload?.pull_request?.number;
+
+            // URL-и сторінок (аналогічно твоєму скрипту для push)
+            const pagesLatestUrl = `https://${owner}.github.io/${context.payload.repository.name}/${runNumber}/`;
+            const pagesBuildsUrl = `https://${owner}.github.io/${context.payload.repository.name}/builds.html`;
+            const runUrl = `https://github.com/${owner}/${repo}/actions/runs/${runId}`;
+
+            const comment = `## 🎭 Playwright Test Results
+            ### 📊 Reports
+            - 🌐 **Allure (GitHub Pages)**:
+              [View Latest Report - Build #${runNumber}](${pagesll Builds
+            - 📦 **Artifacts**: download **allure-report**, **allure-report-single-file**, **test-results** from this workflow run
+
+            ### 🧾 Summary
+            - **Run Number:** ${runNumber}
+            - **Commit:** ${context.sha}
+            - **Branch:** ${context.ref}
+            > Pages оновлюються до 2 хвилин. Якщо сторінка недоступна — спробуй трохи пізніше.`;
+
+            if (!prNumber) {
+              core.warning('PR number is not available in context. Skipping comment.');
+            } else {
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number: prNumber,
+                body: comment
+              });
+            }
 
