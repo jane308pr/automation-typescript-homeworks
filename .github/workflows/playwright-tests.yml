@@ -119,6 +119,13 @@ jobs:
           name: allure-report-single-file
           path: ${{ env.BUILD_FOLDER }}/allure-report-single-file/
           retention-days: 30
+      
+      - name: Checkout existing GitHub Pages branch (if present)
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages
+        continue-on-error: true
 
       - name: Prepare Allure report for Pages
         if: always() && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/lesson22')
