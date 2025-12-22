@@ -1,0 +1,1 @@
+[{"uid":"4a1deaeda4637b59","name":"Verify that taxes are empty","time":{"start":1766438100106,"stop":1766438104676,"duration":4570},"status":"passed","severity":"normal"},{"uid":"6ba91c4dd039a8b6","name":"Go to taxes page","time":{"start":1766438107690,"stop":1766438109193,"duration":1503},"status":"passed","severity":"normal"}]
