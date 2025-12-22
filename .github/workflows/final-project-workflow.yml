@@ -9,13 +9,13 @@ on:
   workflow_dispatch:
     inputs:
       scope:
-        description: "Що запускати: api | ui | all"
+        description: 'Що запускати: api | ui | all'
         type: choice
         options:
-          - all
-          - api
-          - ui
-        default: all
+        - all
+        - api
+        - ui
+        default: 'all'
 
 permissions:
   contents: write
@@ -68,6 +68,10 @@ jobs:
 
       - name: Install dependencies (API)
         run: npm ci
+        working-directory: ${{ env.BUILD_FOLDER }}
+
+      - name: Install Playwright browsers (chromium)
+        run: npx playwright install --with-deps chromium
         working-directory: ${{ env.BUILD_FOLDER }}
 
       - name: Run Vitest (API)
