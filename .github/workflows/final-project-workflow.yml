@@ -200,7 +200,7 @@ jobs:
     name: Generate UI Allure Report [after API]
     runs-on: ubuntu-latest
     needs: [ui_test_after_api]
-    if: ${{ github.event_name == 'workflow_dispatch' && inputs.scope == 'all' && always() }}
+    if: ${{ (github.event_name != 'workflow_dispatch' || inputs.scope == 'all') && always() }}
     env:
       BUILD_FOLDER: ./final_project/ui_tests
     steps:
