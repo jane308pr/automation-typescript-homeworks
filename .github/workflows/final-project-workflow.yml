@@ -28,10 +28,9 @@ permissions:
 env:
   NODE_VERSION: '24.x'
   BUILD_FOLDER: ./final_project/ui_tests
-  RUN_SCOPE: ${{ github.event_name == 'workflow_dispatch' && inputs.scope || 'all' }}
 
   # API secrets
-  API_FOR_HELP_BASE_URL_API: ${{ secrets.API_FOR_HELP_BASE_URL_API }}
+  API_FOR_HELP_BASE_URL: ${{ secrets.API_FOR_HELP_BASE_URL }}
   AUTH_URL:             ${{ secrets.AUTH_URL }}
   AUTH_EMAIL:           ${{ secrets.API_FOR_HELP_EMAIL }}
   AUTH_PASSWORD:        ${{ secrets.API_FOR_HELP_PASSWORD }}
@@ -39,7 +38,7 @@ env:
 
   # UI secrets
   API_FOR_HELP_BASE_URL: ${{ secrets.API_FOR_HELP_BASE_URL }}
-  API_FOR_HELP_EMAIL:   ${{ secrets.API_FOR_HELP_EMAIL }}
+  API_FOR_HELP_EMAIL:    ${{ secrets.API_FOR_HELP_EMAIL }}
   API_FOR_HELP_PASSWORD: ${{ secrets.API_FOR_HELP_PASSWORD }}
 
 # -----------------------------
@@ -50,7 +49,8 @@ jobs:
     name: Run API (Vitest) Tests
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    if: ${{ env.RUN_SCOPE != 'ui' }} # запускати, якщо scope=api або all
+    # Виконуємо якщо НЕ обрано чисто UI (тобто push/PR, або dispatch з all/api)
+    if: ${{ github.event_name != 'workflow_dispatch' || inputs.scope != 'ui' }}
     env:
       BUILD_FOLDER: ./final_project/api_tests
     steps:
@@ -93,7 +93,7 @@ jobs:
     name: Generate API Allure Report
     runs-on: ubuntu-latest
     needs: [api_test]
-    if: ${{ env.RUN_SCOPE != 'ui' && always() }}
+    if: ${{ (github.event_name != 'workflow_dispatch' || inputs.scope != 'ui') && always() }}
     env:
       BUILD_FOLDER: ./final_project/api_tests
     steps:
@@ -145,15 +145,14 @@ jobs:
           retention-days: 30
 
   # -----------------------------
-  # 2) UI TESTS (Playwright + Allure)
-  # 2.1) Після API (для scope=all)
+  # 2) UI TESTS (Playwright + Allure) — після API для scope=all
   # -----------------------------
   ui_test_after_api:
     name: Run UI (Playwright) Tests [after API]
     runs-on: ubuntu-latest
     timeout-minutes: 30
     needs: [api_test]
-    if: ${{ env.RUN_SCOPE == 'all' && needs.api_test.result == 'success' }}
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.scope == 'all' && needs.api_test.result == 'success' }}
     env:
       BUILD_FOLDER: ./final_project/ui_tests
     steps:
@@ -200,7 +199,7 @@ jobs:
     name: Generate UI Allure Report [after API]
     runs-on: ubuntu-latest
     needs: [ui_test_after_api]
-    if: ${{ env.RUN_SCOPE == 'all' && always() }}
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.scope == 'all' && always() }}
     env:
       BUILD_FOLDER: ./final_project/ui_tests
     steps:
@@ -258,7 +257,7 @@ jobs:
     name: Run UI (Playwright) Tests [direct]
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    if: ${{ env.RUN_SCOPE == 'ui' }}
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.scope == 'ui' }}
     env:
       BUILD_FOLDER: ./final_project/ui_tests
     steps:
@@ -305,7 +304,7 @@ jobs:
     name: Generate UI Allure Report [direct]
     runs-on: ubuntu-latest
     needs: [ui_test_direct]
-    if: ${{ env.RUN_SCOPE == 'ui' && always() }}
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.scope == 'ui' && always() }}
     env:
       BUILD_FOLDER: ./final_project/ui_tests
     steps:
@@ -378,7 +377,6 @@ jobs:
           path: gh-pages
         continue-on-error: true
 
-      # Завантажуємо обидва UI/API артефакти звітів (якщо були згенеровані)
       - name: Download API Allure report artifact
         uses: actions/download-artifact@v4
         with:
@@ -398,7 +396,6 @@ jobs:
           mkdir -p gh-pages/${{ github.run_number }}/api
           mkdir -p gh-pages/${{ github.run_number }}/ui
 
-          # Копіюємо, тільки якщо артефакт завантажився
           if [ -d "./tmp/api-allure-report" ]; then
             cp -r ./tmp/api-allure-report/* gh-pages/${{ github.run_number }}/api/
           fi
@@ -406,10 +403,8 @@ jobs:
             cp -r ./tmp/ui-allure-report/* gh-pages/${{ github.run_number }}/ui/
           fi
 
-          # Оновлюємо список білдів
           find gh-pages -maxdepth 1 -type d -printf '%f\n' | grep -E '^[0-9]+$' | sort -rn > gh-pages/builds.txt
 
-          # Генеруємо простий індекс
           cat > gh-pages/builds.html << 'HTML_HEAD'
           <!DOCTYPE html>
           <html>
@@ -468,7 +463,6 @@ jobs:
           echo "- 🔗 API: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/${{ github.run_number }}/api/" >> $GITHUB_STEP_SUMMARY
           echo "- 🔗 UI : https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/${{ github.run_number }}/ui/" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "📋 [View All Builds](https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/builds.html)" >> $GITHUB_STEP_SUMMARY
+          echo "📋 https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/builds.html" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "> **Note**: Pages може оновлюватися до 1-2 хв. Якщо бачиш 404 — зачекай і перезавантаж." >> $GITHUB_STEP_SUMMARY
-
