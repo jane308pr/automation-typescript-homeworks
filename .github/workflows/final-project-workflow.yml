@@ -11,10 +11,7 @@ on:
       scope:
         description: 'Що запускати: api | ui | all'
         type: choice
-        options:
-        - all
-        - api
-        - ui
+        options: [all, api, ui]
         default: 'all'
 
 permissions:
@@ -156,7 +153,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     needs: [api_test]
-    if: ${{ github.event_name == 'workflow_dispatch' && inputs.scope == 'all' && needs.api_test.result == 'success' }}
+    if: ${{ (github.event_name != 'workflow_dispatch' || inputs.scope == 'all') && needs.api_test.result == 'success' }}
     env:
       BUILD_FOLDER: ./final_project/ui_tests
     steps:
