@@ -1,0 +1,6 @@
+node_modules/
+.env
+*/.idea
+allure-results
+allure-report
+allure-report-single-file

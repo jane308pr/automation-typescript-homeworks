@@ -1,0 +1,42 @@
+{
+  "name": "simple",
+  "version": "1.0.0",
+  "description": "ts simple project",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "allure:generate": "npx allure generate allure-results -o allure-report --clean",
+    "allure:single": "npx allure generate allure-results --single-file --clean -o allure-report-single-file",
+    "allure:open": "npx allure open allure-report",
+    "report": "npm run test && npm run allure:generate && npm run allure:single && allure open allure-report"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.38.0",
+    "@stylistic/eslint-plugin": "^5.5.0",
+    "@stylistic/eslint-plugin-ts": "^4.4.1",
+    "@types/chai": "^5.2.3",
+    "@types/dotenv-safe": "^9.1.0",
+    "@vitest/runner": "^4.0.16",
+    "allure-commandline": "^2.36.0",
+    "allure-js-commons": "^3.4.3",
+    "allure-vitest": "^3.4.3",
+    "chai": "^6.2.0",
+    "dotenv-safe": "^5.0.1",
+    "eslint": "^9.38.0",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-unicorn": "^62.0.0",
+    "globals": "^16.4.0",
+    "prettier": "3.6.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.2",
+    "vitest": "^4.0.16"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "playwright": "^1.56.1"
+  }
+}
