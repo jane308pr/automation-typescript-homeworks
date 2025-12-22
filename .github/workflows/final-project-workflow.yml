@@ -30,7 +30,7 @@ env:
   BUILD_FOLDER: ./final_project/ui_tests
 
   # API secrets
-  API_FOR_HELP_BASE_URL: ${{ secrets.API_FOR_HELP_BASE_URL }}
+  API_FOR_HELP_BASE_URL_API: ${{ secrets.API_FOR_HELP_BASE_URL_API }}
   AUTH_URL:             ${{ secrets.AUTH_URL }}
   AUTH_EMAIL:           ${{ secrets.API_FOR_HELP_EMAIL }}
   AUTH_PASSWORD:        ${{ secrets.API_FOR_HELP_PASSWORD }}
