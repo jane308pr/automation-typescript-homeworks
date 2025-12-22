@@ -9,7 +9,7 @@ export class ConfigService {
         return {
             api: {
                 forHelpApi: {
-                    baseUrl: process.env.API_FOR_HELP_BASE_URL || '',
+                    baseUrl: process.env.API_FOR_HELP_BASE_URL_API || '',
                     cookiesHeader: process.env.API_FOR_HELP_COOKIES || undefined }
             }
         };

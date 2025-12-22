@@ -6,6 +6,16 @@ on:
     branches: [main, final_project]
   pull_request:
     branches: [main, final_project]
+  workflow_dispatch:
+    inputs:
+      scope:
+        description: "Що запускати: api | ui | all"
+        type: choice
+        options:
+          - all
+          - api
+          - ui
+        default: all
 
 permissions:
   contents: write
@@ -18,16 +28,31 @@ permissions:
 env:
   NODE_VERSION: '24.x'
   BUILD_FOLDER: ./final_project/ui_tests
+  RUN_SCOPE: ${{ github.event_name == 'workflow_dispatch' && inputs.scope || 'all' }}
+
+  # API secrets
+  API_FOR_HELP_BASE_URL_API: ${{ secrets.API_FOR_HELP_BASE_URL_API }}
+  AUTH_URL:             ${{ secrets.AUTH_URL }}
+  AUTH_EMAIL:           ${{ secrets.API_FOR_HELP_EMAIL }}
+  AUTH_PASSWORD:        ${{ secrets.API_FOR_HELP_PASSWORD }}
+  API_DOMAIN:           ${{ secrets.API_DOMAIN }}
+
+  # UI secrets
   API_FOR_HELP_BASE_URL: ${{ secrets.API_FOR_HELP_BASE_URL }}
-  API_FOR_HELP_EMAIL: ${{ secrets.API_FOR_HELP_EMAIL }}
+  API_FOR_HELP_EMAIL:   ${{ secrets.API_FOR_HELP_EMAIL }}
   API_FOR_HELP_PASSWORD: ${{ secrets.API_FOR_HELP_PASSWORD }}
 
+# -----------------------------
+# 1) API TESTS (Vitest + Allure)
+# -----------------------------
 jobs:
-  test:
-    name: Run Playwright Tests
+  api_test:
+    name: Run API (Vitest) Tests
     runs-on: ubuntu-latest
     timeout-minutes: 30
-
+    if: ${{ env.RUN_SCOPE != 'ui' }} # запускати, якщо scope=api або all
+    env:
+      BUILD_FOLDER: ./final_project/api_tests
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -41,39 +66,143 @@ jobs:
           cache: 'npm'
           cache-dependency-path: ${{ env.BUILD_FOLDER }}/package-lock.json
 
-      - name: Install dependencies
+      - name: Install dependencies (API)
         run: npm ci
         working-directory: ${{ env.BUILD_FOLDER }}
 
-      - name: Install Playwright browsers
+      - name: Run Vitest (API)
+        id: run_api_tests
+        working-directory: ${{ env.BUILD_FOLDER }}
+        run: |
+          npx vitest run
+        continue-on-error: true
+
+      - name: Upload Allure results (API)
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: api-allure-results
+          path: ${{ env.BUILD_FOLDER }}/allure-results/
+          retention-days: 30
+
+      - name: Fail job if API tests failed
+        if: steps.run_api_tests.outcome == 'failure'
+        run: exit 1
+
+  api_report:
+    name: Generate API Allure Report
+    runs-on: ubuntu-latest
+    needs: [api_test]
+    if: ${{ env.RUN_SCOPE != 'ui' && always() }}
+    env:
+      BUILD_FOLDER: ./final_project/api_tests
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+          cache-dependency-path: final_project/api_tests/package-lock.json
+
+      - name: Install dependencies (API)
+        run: npm ci
+        working-directory: ${{ env.BUILD_FOLDER }}
+
+      - name: Download Allure results (API)
+        uses: actions/download-artifact@v4
+        with:
+          name: api-allure-results
+          path: ${{ env.BUILD_FOLDER }}/allure-results
+
+      - name: Generate Allure report (API)
+        run: |
+          npx allure generate allure-results -o allure-report --clean
+          echo "Allure API report generated successfully"
+        working-directory: ${{ env.BUILD_FOLDER }}
+
+      - name: Generate Allure single-file (API)
+        run: |
+          npx allure generate allure-results --single-file --clean -o allure-report-single-file
+        working-directory: ${{ env.BUILD_FOLDER }}
+
+      - name: Upload Allure report artifact (API)
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: api-allure-report
+          path: ${{ env.BUILD_FOLDER }}/allure-report/
+          retention-days: 30
+
+      - name: Upload Allure single-file artifact (API)
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: api-allure-report-single-file
+          path: ${{ env.BUILD_FOLDER }}/allure-report-single-file/
+          retention-days: 30
+
+  # -----------------------------
+  # 2) UI TESTS (Playwright + Allure)
+  # 2.1) Після API (для scope=all)
+  # -----------------------------
+  ui_test_after_api:
+    name: Run UI (Playwright) Tests [after API]
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    needs: [api_test]
+    if: ${{ env.RUN_SCOPE == 'all' && needs.api_test.result == 'success' }}
+    env:
+      BUILD_FOLDER: ./final_project/ui_tests
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+          cache-dependency-path: ${{ env.BUILD_FOLDER }}/package-lock.json
+
+      - name: Install dependencies (UI)
+        run: npm ci
+        working-directory: ${{ env.BUILD_FOLDER }}
+
+      - name: Install Playwright browsers (chromium)
         run: npx playwright install --with-deps chromium
         working-directory: ${{ env.BUILD_FOLDER }}
 
-      - name: Run Playwright tests
-        id: run_tests
+      - name: Run Playwright tests (UI)
+        id: run_ui_tests_after_api
         working-directory: ${{ env.BUILD_FOLDER }}
         run: |
           npx playwright test
         continue-on-error: true
 
-      - name: Upload Allure results
+      - name: Upload Allure results (UI)
         if: ${{ !cancelled() }}
         uses: actions/upload-artifact@v4
         with:
-          name: allure-results
+          name: ui-allure-results
           path: ${{ env.BUILD_FOLDER }}/allure-results/
           retention-days: 30
 
-      - name: Fail job if tests failed
-        if: steps.run_tests.outcome == 'failure'
+      - name: Fail job if UI tests failed
+        if: steps.run_ui_tests_after_api.outcome == 'failure'
         run: exit 1
 
-  report:
-    name: Generate & Publish Allure Report
+  ui_report_after_api:
+    name: Generate UI Allure Report [after API]
     runs-on: ubuntu-latest
-    needs: [test]
-    if: always()
-
+    needs: [ui_test_after_api]
+    if: ${{ env.RUN_SCOPE == 'all' && always() }}
+    env:
+      BUILD_FOLDER: ./final_project/ui_tests
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -85,43 +214,163 @@ jobs:
           cache: 'npm'
           cache-dependency-path: final_project/ui_tests/package-lock.json
 
-      - name: Install dependencies
+      - name: Install dependencies (UI)
         run: npm ci
         working-directory: ${{ env.BUILD_FOLDER }}
 
-      - name: Download Allure results
+      - name: Download Allure results (UI)
         uses: actions/download-artifact@v4
         with:
-          name: allure-results
+          name: ui-allure-results
           path: ${{ env.BUILD_FOLDER }}/allure-results
 
-      - name: Generate Allure report
+      - name: Generate Allure report (UI)
         run: |
           npx allure generate allure-results -o allure-report --clean
-          echo "Allure report generated successfully"
+          echo "Allure UI report generated successfully"
         working-directory: ${{ env.BUILD_FOLDER }}
 
-      - name: Generate Allure single-file report (optional)
+      - name: Generate Allure single-file (UI)
         run: |
           npx allure generate allure-results --single-file --clean -o allure-report-single-file
         working-directory: ${{ env.BUILD_FOLDER }}
 
-      - name: Upload Allure report artifact
-        if: always()
+      - name: Upload Allure report artifact (UI)
         uses: actions/upload-artifact@v4
+        if: always()
         with:
-          name: allure-report
+          name: ui-allure-report
           path: ${{ env.BUILD_FOLDER }}/allure-report/
           retention-days: 30
 
-      - name: Upload Allure single-file artifact
-        if: always()
+      - name: Upload Allure single-file artifact (UI)
         uses: actions/upload-artifact@v4
+        if: always()
         with:
-          name: allure-report-single-file
+          name: ui-allure-report-single-file
           path: ${{ env.BUILD_FOLDER }}/allure-report-single-file/
           retention-days: 30
-      
+
+  # -----------------------------
+  # 2.2) UI напряму (для scope=ui)
+  # -----------------------------
+  ui_test_direct:
+    name: Run UI (Playwright) Tests [direct]
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    if: ${{ env.RUN_SCOPE == 'ui' }}
+    env:
+      BUILD_FOLDER: ./final_project/ui_tests
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+          cache-dependency-path: ${{ env.BUILD_FOLDER }}/package-lock.json
+
+      - name: Install dependencies (UI)
+        run: npm ci
+        working-directory: ${{ env.BUILD_FOLDER }}
+
+      - name: Install Playwright browsers (chromium)
+        run: npx playwright install --with-deps chromium
+        working-directory: ${{ env.BUILD_FOLDER }}
+
+      - name: Run Playwright tests (UI)
+        id: run_ui_tests_direct
+        working-directory: ${{ env.BUILD_FOLDER }}
+        run: |
+          npx playwright test
+        continue-on-error: true
+
+      - name: Upload Allure results (UI)
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: ui-allure-results
+          path: ${{ env.BUILD_FOLDER }}/allure-results/
+          retention-days: 30
+
+      - name: Fail job if UI tests failed
+        if: steps.run_ui_tests_direct.outcome == 'failure'
+        run: exit 1
+
+  ui_report_direct:
+    name: Generate UI Allure Report [direct]
+    runs-on: ubuntu-latest
+    needs: [ui_test_direct]
+    if: ${{ env.RUN_SCOPE == 'ui' && always() }}
+    env:
+      BUILD_FOLDER: ./final_project/ui_tests
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+          cache-dependency-path: final_project/ui_tests/package-lock.json
+
+      - name: Install dependencies (UI)
+        run: npm ci
+        working-directory: ${{ env.BUILD_FOLDER }}
+
+      - name: Download Allure results (UI)
+        uses: actions/download-artifact@v4
+        with:
+          name: ui-allure-results
+          path: ${{ env.BUILD_FOLDER }}/allure-results
+
+      - name: Generate Allure report (UI)
+        run: |
+          npx allure generate allure-results -o allure-report --clean
+          echo "Allure UI report generated successfully"
+        working-directory: ${{ env.BUILD_FOLDER }}
+
+      - name: Generate Allure single-file (UI)
+        run: |
+          npx allure generate allure-results --single-file --clean -o allure-report-single-file
+        working-directory: ${{ env.BUILD_FOLDER }}
+
+      - name: Upload Allure report artifact (UI)
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ui-allure-report
+          path: ${{ env.BUILD_FOLDER }}/allure-report/
+          retention-days: 30
+
+      - name: Upload Allure single-file artifact (UI)
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ui-allure-report-single-file
+          path: ${{ env.BUILD_FOLDER }}/allure-report-single-file/
+          retention-days: 30
+
+  # -----------------------------
+  # 3) Публікація на GitHub Pages (об’єднано API + UI)
+  # -----------------------------
+  publish_pages:
+    name: Publish Allure Reports to GitHub Pages
+    runs-on: ubuntu-latest
+    needs:
+      - api_report
+      - ui_report_after_api
+      - ui_report_direct
+    if: ${{ always() && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/final_project') }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Checkout existing GitHub Pages branch (if present)
         uses: actions/checkout@v4
         with:
@@ -129,62 +378,77 @@ jobs:
           path: gh-pages
         continue-on-error: true
 
-      - name: Prepare Allure report for Pages
-        if: always() && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/final_project')
+      # Завантажуємо обидва UI/API артефакти звітів (якщо були згенеровані)
+      - name: Download API Allure report artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: api-allure-report
+          path: ./tmp/api-allure-report
+        continue-on-error: true
+
+      - name: Download UI Allure report artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ui-allure-report
+          path: ./tmp/ui-allure-report
+        continue-on-error: true
+
+      - name: Prepare Allure report for Pages (merge API/UI)
         run: |
-          mkdir -p gh-pages/${{ github.run_number }}
-          cp -r ${{ env.BUILD_FOLDER }}/allure-report/* gh-pages/${{ github.run_number }}/
+          mkdir -p gh-pages/${{ github.run_number }}/api
+          mkdir -p gh-pages/${{ github.run_number }}/ui
 
-          
-          find gh-pages -maxdepth 1 -type d -printf '%f\n' \
-                | grep -E '^[0-9]+$' \
-                | sort -rn \
-                > gh-pages/builds.txt
+          # Копіюємо, тільки якщо артефакт завантажився
+          if [ -d "./tmp/api-allure-report" ]; then
+            cp -r ./tmp/api-allure-report/* gh-pages/${{ github.run_number }}/api/
+          fi
+          if [ -d "./tmp/ui-allure-report" ]; then
+            cp -r ./tmp/ui-allure-report/* gh-pages/${{ github.run_number }}/ui/
+          fi
 
-              # Початок HTML
+          # Оновлюємо список білдів
+          find gh-pages -maxdepth 1 -type d -printf '%f\n' | grep -E '^[0-9]+$' | sort -rn > gh-pages/builds.txt
+
+          # Генеруємо простий індекс
           cat > gh-pages/builds.html << 'HTML_HEAD'
           <!DOCTYPE html>
           <html>
           <head>
-          <meta charset="utf-8">
-          <title>Allure Test Reports - All Builds</title>
-          <style>
-            body { font-family:Arial, sans-serif; max-width:800px; margin:50px auto; padding:20px; }
-            h1 { color: #333; }
-            ul { list-style:none; padding:0;}
-            li { margin:10px 0; padding: 10px; background: #f5f5f5; border-radius: 5px; }
-            a { color: #0066cc; text-decoration: none; font-weight: bold; }
-            a:hover { text-decoration: underline; }
-            .latest { background: #e3f2fd; border: 2px solid #2196f3; }
-          </style>
+            <meta charset="utf-8">
+            <title>Allure Test Reports - All Builds</title>
+            <style>
+              body { font-family:Arial, sans-serif; max-width:900px; margin:50px auto; padding:20px; }
+              h1 { color: #333; }
+              ul { list-style:none; padding:0;}
+              li { margin:10px 0; padding: 10px; background: #f5f5f5; border-radius: 5px; }
+              a { color: #0066cc; text-decoration: none; font-weight: bold; }
+              a:hover { text-decoration: underline; }
+              .latest { background: #e3f2fd; border: 2px solid #2196f3; }
+            </style>
           </head>
           <body>
-          <h1>📊 Allure Test Reports - All Builds</h1>
-          <p>Available reports by build number:</p>
-          <ul>
+            <h1>📊 Allure Test Reports - All Builds</h1>
+            <p>Available reports by build number:</p>
+            <ul>
           HTML_HEAD
-  
-          # Рендеримо елементи списку (останній ран — Latest)
+
           FIRST=1
           while read -r BUILD; do
-          if [ "$FIRST" -eq 1 ]; then
-          # Перший (найбільший) білд — позначаємо як Latest
-          echo "    <li class=\"latest\"><a href=\"./${BUILD}/\">Build #${BUILD} (Latest)</a></li>" >> gh-pages/builds.html
-          FIRST=0
-          else
-          echo "    <li><a href=\"./${BUILD}/\">Build #${BUILD}</a></li>" >> gh-pages/builds.html
-          fi
+            if [ "$FIRST" -eq 1 ]; then
+              echo "  <li class=\"latest\">Build #${BUILD}: <a href=\"./${BUILD}/api/\">API</a> | <a href=\"./${BUILD}/ui/\">UI</a> (Latest)</li>" >> gh-pages/builds.html
+              FIRST=0
+            else
+              echo "  <li>Build #${BUILD}: <a href=\"./${BUILD}/api/\">API</a> | <a href=\"./${BUILD}/ui/\">UI</a></li>" >> gh-pages/builds.html
+            fi
           done < gh-pages/builds.txt
-          
-          # Кінець HTML
+
           cat >> gh-pages/builds.html << 'HTML_TAIL'
-          </ul>
+            </ul>
           </body>
           </html>
           HTML_TAIL
 
       - name: Deploy to GitHub Pages
-        if: always() && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/final_project')
         id: gh-pages-deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
@@ -198,99 +462,13 @@ jobs:
         run: |
           echo "## 📊 Test Reports" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          if [ "${{ github.ref }}" == "refs/heads/main" ] || [ "${{ github.ref }}" == "refs/heads/final_project" ]; then
-            if [ "${{ steps.gh-pages-deploy.outcome }}" == "success" ]; then
-            echo "### 🌐 Allure Report (GitHub Pages)" >> $GITHUB_STEP_SUMMARY
-            echo "" >> $GITHUB_STEP_SUMMARY
-            echo "📊 **[View Latest Report - Build #${{ github.run_number }}](https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/${{ github.run_number }}/)**" >> $GITHUB_STEP_SUMMARY
-            echo "" >> $GITHUB_STEP_SUMMARY
-            echo "📋 [View All Builds](https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/builds.html)" >> $GITHUB_STEP_SUMMARY
-            echo "" >> $GITHUB_STEP_SUMMARY
-            echo "> **Note**: It may take 1-2 minutes for GitHub Pages to update. If you see a 404, wait a moment and refresh." >> $GITHUB_STEP_SUMMARY
-            echo "" >> $GITHUB_STEP_SUMMARY
-            else
-            echo "### ⚠️ Allure Report" >> $GITHUB_STEP_SUMMARY
-            echo "GitHub Pages deployment was skipped or failed. Download the artifact below instead." >> $GITHUB_STEP_SUMMARY
-            echo "" >> $GITHUB_STEP_SUMMARY
-            fi
-          fi
-
-          echo "### 📦 Downloadable Reports" >> $GITHUB_STEP_SUMMARY
+          echo "### 🌐 Allure Report (GitHub Pages)" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "- 📊 **Allure Report**: Download the \`allure-report\` artifact" >> $GITHUB_STEP_SUMMARY
-          echo "- 📄 **Allure Single File**: Download the \`allure-report-single-file\` artifact" >> $GITHUB_STEP_SUMMARY
+          echo "📊 **Latest Build #${{ github.run_number }}**:" >> $GITHUB_STEP_SUMMARY
+          echo "- 🔗 API: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/${{ github.run_number }}/api/" >> $GITHUB_STEP_SUMMARY
+          echo "- 🔗 UI : https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/${{ github.run_number }}/ui/" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-   
-      - name: Comment commit with reports
-        if: always() && github.event_name == 'push' && github.ref == 'refs/heads/final_project'
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const owner = context.repo.owner;
-            const repo = context.repo.repo;
-            const runId = context.runId;
-            const runNumber = context.runNumber;
-            const pagesLatestUrl = `https://${owner}.github.io/${context.payload.repository.name}/${runNumber}/`;
-            const pagesBuildsUrl = `https://${owner}.github.io/${context.payload.repository.name}/builds.html`;
-            const runUrl = `https://github.com/${owner}/${repo}/actions/runs/${runId}`;
-
-            const comment = `## 🎭 Playwright Test Results
-            ### 📊 Reports
-            - 🌐 **Allure (GitHub Pages)**: 
-              [View Latest Report - Build #${runNumber}](${pagesLatestUrl})
-              [All Builds](${pagesBuildsUrl})
-            - 📦 **Artifacts**: download **allure-report**, **allure-report-single-file**, **test-results** from [this](${runUrl}) workflow run
-            ### 🧾 Summary
-            - **Run Number:** ${runNumber}
-            - **Commit:** ${context.sha}
-            - **Branch:** ${context.ref}
-            > Pages оновлюються до 2 хвилин. Якщо сторінка недоступна — спробуй трохи пізніше.`;
-
-            
-            await github.rest.repos.createCommitComment({
-              owner,
-              repo,
-              commit_sha: context.sha,
-              body: comment
-            });
-      
-      - name: Comment PR with reports
-        if: always() && github.event_name == 'pull_request'
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const owner = context.repo.owner;
-            const repo = context.repo.repo;
-            const runId = context.runId;
-            const runNumber = context.runNumber;
-
-            const prNumber = context.issue?.number ?? context.payload?.pull_request?.number;
-
-            const pagesLatestUrl = `https://${owner}.github.io/${context.payload.repository.name}/${runNumber}/`;
-            const pagesBuildsUrl = `https://${owner}.github.io/${context.payload.repository.name}/builds.html`;
-            const runUrl = `https://github.com/${owner}/${repo}/actions/runs/${runId}`;
-
-            const comment = `## 🎭 Playwright Test Results
-            ### 📊 Reports
-            - 🌐 **Allure (GitHub Pages)**:
-              [View Latest Report - Build #${runNumber}](${pagesLatestUrl})
-              [All Builds](${pagesBuildsUrl})
-            - 📦 **Artifacts**: download **allure-report**, **allure-report-single-file**, **test-results** from [this](${runUrl}) workflow run
-
-            ### 🧾 Summary
-            - **Run Number:** ${runNumber}
-            - **Commit:** ${context.sha}
-            - **Branch:** ${context.ref}
-            > Pages оновлюються до 2 хвилин. Якщо сторінка недоступна — спробуй трохи пізніше.`;
-
-            if (!prNumber) {
-              core.warning('PR number is not available in context. Skipping comment.');
-            } else {
-              await github.rest.issues.createComment({
-                owner,
-                repo,
-                issue_number: prNumber,
-                body: comment
-              });
-            }
+          echo "📋 [View All Builds](https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/builds.html)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "> **Note**: Pages може оновлюватися до 1-2 хв. Якщо бачиш 404 — зачекай і перезавантаж." >> $GITHUB_STEP_SUMMARY
 

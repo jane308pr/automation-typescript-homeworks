@@ -1,7 +1,8 @@
 const originalFetch = globalThis.fetch;
 
 function isDebugEnabled(): boolean {
-    return String(process.env.HTTP_DEBUG).toLowerCase() === 'true';
+    // return String(process.env.HTTP_DEBUG).toLowerCase() === 'true';
+    return true;
 }
 
 function truncate(text: string, limit = 2000): string {
